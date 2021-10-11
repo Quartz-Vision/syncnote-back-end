@@ -25,30 +25,18 @@ class UserCreateSerializer(serializers.ModelSerializer):
     """
     User creation serializer with password setting
     """
-    old_password = serializers.CharField(
-        max_length=32,
-        write_only=True,
-        required=False,
-        allow_blank=True,
-        allow_null=True
-    )
 
     class Meta:
         model = User
         fields = (
-            'id', 'email', 'password', 'old_password', 'username'
+            'id', 'email', 'password', 'username'
         )
         extra_kwargs = {
             'password': {
                 'write_only': True,
-                'required': False,
-                'trim_whitespace': False,
-                'allow_blank': True,
-                'allow_null': True
             },
             'email': {'required': False},
         }
-        read_only_fields = ('pk', 'is_invited')
 
     # def send_registration_greeting(self, user, password):
     #     send_mail_to(
@@ -68,33 +56,65 @@ class UserCreateSerializer(serializers.ModelSerializer):
     #
     #     return super(UserCreateSerializer, self).validate(data)
 
-    def update(self, instance, validated_data):
-        """
-        If there is a password changing - check if the old one is correct
-        """
-        password = validated_data.pop('password', None)
-        old_password = validated_data.pop('old_password', None)
-        if password:
-            if not instance.check_password(old_password):
-                raise serializers.ValidationError("wrong password")
-
-            instance.set_password(password)
-            instance.save()
-
-        return super(UserCreateSerializer, self).update(instance, validated_data)
-
     def create(self, validated_data):
         """
         Creates new user with an e-mail and a password, then calls 'update' to add another fields
         """
         password = validated_data.pop('password', '')
-        user = User(email=validated_data.pop('email', ''))
+        user = User(email=validated_data.pop('email', ''), username=validated_data.pop('username', ''))
         user.set_password(password)
         user.save()
 
         # self.send_registration_greeting(user, password)
 
         return self.update(user, validated_data)
+
+
+class UserUpdateSerializer(serializers.ModelSerializer):
+    old_password = serializers.CharField(
+        max_length=256,
+        write_only=True,
+        required=False
+    )
+    new_password = serializers.CharField(
+        max_length=256,
+        write_only=True,
+        required=False,
+        allow_null=True,
+        allow_blank=True
+    )
+
+    class Meta:
+        model = User
+        fields = (
+            'id', 'email', 'new_password', 'old_password', 'username'
+        )
+        extra_kwargs = {
+            'username': {'required': False},
+            'email': {'required': False},
+        }
+
+    def validate(self, data):
+        new_password = data.get('new_password')
+        if new_password:
+            validators.validate_password(password=new_password, user=User)
+
+        return super(UserUpdateSerializer, self).validate(data)
+
+    def update(self, instance, validated_data):
+        """
+        If there is a password changing - check if the old one is correct
+        """
+        new_password = validated_data.pop('password', None)
+        old_password = validated_data.pop('old_password', None)
+        if new_password:
+            if not instance.check_password(old_password):
+                raise serializers.ValidationError("wrong old password")
+
+            instance.set_password(new_password)
+            instance.save()
+
+        return super(UserUpdateSerializer, self).update(instance, validated_data)
 
 
 # class CustomPasswordField(PasswordField):

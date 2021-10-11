@@ -4,17 +4,20 @@ from rest_auth.views import (
     PasswordResetView,
     PasswordResetConfirmView,
 )
-from rest_framework import status, mixins, viewsets, generics
-from rest_framework.decorators import action
+from rest_framework import status, generics
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.renderers import TemplateHTMLRenderer, JSONRenderer
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
-from rest_framework_simplejwt.views import TokenObtainPairView
 
-from apps.user.serializers import UserCreateSerializer, UserRetrieveSerializer, CustomPasswordResetSerializer, \
-    CustomPasswordResetConfirmSerializer
+from apps.user.serializers import (
+    UserCreateSerializer,
+    UserRetrieveSerializer,
+    CustomPasswordResetSerializer,
+    CustomPasswordResetConfirmSerializer,
+    UserUpdateSerializer
+)
 
 User = get_user_model()
 
@@ -31,10 +34,7 @@ class UserCreateView(generics.GenericAPIView):
         """
         Creates new user and returns it's auth token
         """
-        serializer = self.get_serializer(
-            instance=User.get_invited_or_none(request.data.get('email')),
-            data=request.data
-        )
+        serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
 
@@ -55,7 +55,7 @@ class CurrentUserViewSet(generics.GenericAPIView):
     """
     queryset = User.objects.all()
     permission_classes = (IsAuthenticated, )
-    serializer_class = UserCreateSerializer
+    serializer_class = UserUpdateSerializer
 
     @swagger_auto_schema(
         operation_description="Get the user that is logged in",
@@ -77,7 +77,7 @@ class CurrentUserViewSet(generics.GenericAPIView):
         request_body=UserCreateSerializer()
     )
     def patch(self, request, *args, **kwargs):
-        serializer = UserCreateSerializer(
+        serializer = UserUpdateSerializer(
             instance=request.user,
             data=request.data
         )
@@ -139,7 +139,7 @@ class CustomPasswordResetConfirmView(PasswordResetConfirmView):
         return Response({
             "uid": self.request.query_params.get("uid"),
             "token": self.request.query_params.get("token")
-        }, template_name='password_reset_confirm.html')
+        }, template_name='user/password_reset_confirm.html')
 
 
 class CustomPasswordResetSuccessView(APIView):
@@ -152,4 +152,4 @@ class CustomPasswordResetSuccessView(APIView):
         }
     )
     def get(self, *args, **kwargs):
-        return Response({}, template_name='password_reset_success.html')
+        return Response({}, template_name='user/password_reset_success.html')

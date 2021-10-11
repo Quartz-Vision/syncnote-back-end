@@ -1,0 +1,131 @@
+{% load url_tools %}
+{% load static %}
+
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+
+<style type="text/css">
+:root {
+    Color-scheme: light dark;
+    supported-color-schemes:light dark;
+}
+</style>
+
+
+
+<p class="main-logo" style="text-align:center;">
+{#  <img class="main-logo__image" src="{% backend_full_url %}{% static 'casamsa_common/zammans_logo_small.png' %}?v=1" alt="" style="height:89px;width:auto;"/>#}
+<br>
+</p>
+<p class="text-default" style="font-size:17px;color:black;">Hej {{ user.first_name }},</p>
+<p class="text-default" style="font-size:17px;color:black;">
+  Vi är glada över att du har börjat använda Zammans. På <a href="www.zammans.com">www.zammans.com</a> hittar du mer information om Zammans. Där kan du även ta del av våra vanliga frågor och svar.
+<br>
+</p>
+<p class="text-default" style="font-size:17px;color:black;">
+  Dina inloggningsuppgifter:
+<br>
+</p>
+<ul class="list" align="left" type="disc" style="margin:0;margin-left:25px;padding:0;font-size:17px;color:black;">
+  <li>
+    E-postadress: {{ user.email }}
+    </li>
+  <li>
+    Lösenord: {{ password }}
+    </li>
+</ul>
+<p class="text-default" style="font-size:17px;color:black;">
+  Tips för dig som ny Zammans-användare:
+</p>
+
+<p class="tips-item__text" style="font-size:17px;color:black;clear:both;margin:25px 0px;">
+{#    <img class="tips-item__image" src="{% backend_full_url %}{% static 'casamsa_common/add_user.png' %}?v=2" alt="" style="height:42px;width:auto;float:left;margin:0px 20px;"/>#}
+    Kom ihåg att bjud in de personer som du vill dela fritidshusets profil med. Då gör du innehållet tillgängligt för er alla och ni har nu skapat en gemensam plattform för ert fritidshus.
+</p>
+
+<p class="tips-item__text" style="font-size:17px;color:black;clear:both;margin:25px 0px;">
+{#    <img class="tips-item__image" src="{% backend_full_url %}{% static 'casamsa_common/add_property.png' %}?v=2" alt="" style="height:42px;width:auto;float:left;margin:0px 20px;"/>#}
+    Du kan enkelt lägga till fler hus. Varje hus har en enskild profil där du själv bestämmer vilka personer du vill dela innehåll med för de olika hus-profilerna.
+</p>
+
+<p class="text-default" style="font-size:17px;color:black;">
+    <br>
+  Tveka inte att höra av dig till vår support om du har funderingar, behöver hjälp eller bara vill komma med inputs till vår app: <a href="mailto:support@zammans.com">support@zammans.com</a>.
+<br>
+</p>
+<p class="text-default" style="font-size:17px;color:black;">
+    Tack!
+    <br>
+    <br>
+</p>
+<p class="text-default" style="font-size:17px;color:black;">
+  Vänligen,<br>
+  Erik Wasell, VD <br>
+  <br>
+  <img class="text-logo-image" src="{% backend_full_url %}{% static 'casamsa_common/zammans_logo_large.png' %}?v=1" alt="" style="height:23.5px;width:auto;"/><br>
+</p>
+
+
+<style>
+    .text-default {
+    	font-size: 17px;
+        color: black;
+    }
+
+    .list {
+    	margin: 0;
+        margin-left: 25px;
+        padding: 0;
+        font-size: 17px;
+        color: black;
+    }
+
+    .tips-item__image {
+        height: 42px;
+        width: auto;
+        float: left;
+        margin: 0px 20px;
+    }
+    .tips-item__text {
+        font-size: 17px;
+        color: black;
+        clear: both;
+        margin: 25px 0px;
+    }
+
+    .main-logo {
+    	text-align: center
+    }
+    .main-logo__image {
+    	height: 89px;
+        width: auto;
+    }
+
+    .text-logo-image {
+    	height: 23.5px;
+        width: auto;
+    }
+
+    .store-link {
+    	margin: 5px 10px;
+    }
+    .store-link__image {
+    	height: 48px;
+        width: auto;
+    }
+</style>
+
+
+{# Dark mode style for ios #}
+<style type="text/css">
+@media (prefers-color-scheme: dark ) {
+    body {
+        background-color: transparent;
+    }
+    .text-default, .tips-item__text, .list {
+        color: #fff !important;
+    }
+}
+</style>
+
+{#<a href="{% api_full_url 'common:common-redirect_to' %}?url=casamsa://property/{{ property.id }}">Gå till ansökan...</a> <br>#}

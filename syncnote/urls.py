@@ -13,7 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-
+from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
@@ -25,7 +25,8 @@ from rest_framework import permissions
 
 urlpatterns = [
     path('watch-tower/', admin.site.urls),
-    path('user/', include('apps.user.urls')),
+    path('api/user/', include('apps.user.urls')),
+    path('api/common/', include('apps.common.urls')),
 ]
 
 if settings.DEBUG:
@@ -43,3 +44,5 @@ if settings.DEBUG:
         *static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT),
         path('docs/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui')
     ]
+
+urlpatterns = i18n_patterns(*urlpatterns)

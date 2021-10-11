@@ -10,7 +10,7 @@ from urllib.parse import urljoin
 class FullUrlFileField(serializers.FileField):
     def to_representation(self, value):
         if value:
-            return urljoin(settings.BACKEND_HOST, value.url)
+            return urljoin(settings.BACKEND_DOMAIN, value.url)
         else:
             return None
 
@@ -18,7 +18,7 @@ class FullUrlFileField(serializers.FileField):
 class FullUrlImageField(serializers.ImageField):
     def to_representation(self, value):
         if value:
-            return urljoin(settings.BACKEND_HOST, value.url)
+            return urljoin(settings.BACKEND_DOMAIN, value.url)
         else:
             return None
 
