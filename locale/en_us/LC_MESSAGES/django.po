@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-14 09:31+0000\n"
+"POT-Creation-Date: 2021-10-14 12:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,48 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: apps/notes/models.py:15 apps/notes/models.py:31
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:48
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:365
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/token_blacklist/admin.py:77
+msgid "user"
+msgstr ""
+
+#: apps/notes/models.py:19
+msgid "text"
+msgstr ""
+
+#: apps/notes/models.py:35
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/models.py:10
+msgid "title"
+msgstr ""
+
+#: apps/notes/models.py:39
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/models.py:11
+#: env/lib/python3.9/site-packages/rest_framework/templates/rest_framework/base.html:75
+msgid "content"
+msgstr ""
+
+#: apps/notes/models.py:44
+msgid "color"
+msgstr ""
+
+#: apps/notes/models.py:48
+msgid "data size"
+msgstr ""
+
+#: apps/notes/models.py:53
+msgid "tags"
+msgstr ""
+
+#: apps/notes/models.py:57
+msgid "Note"
+msgstr ""
+
+#: apps/notes/models.py:58
+msgid "Notes"
+msgstr ""
 
 #: apps/user/templates/user/password_reset_confirm.html:22
 msgid "Reset your Syncnote account password"
@@ -277,7 +319,7 @@ msgid "Greek"
 msgstr ""
 
 #: env/lib/python3.9/site-packages/django/conf/global_settings.py:69
-#: syncnote/settings.py:121
+#: syncnote/settings.py:122
 msgid "English"
 msgstr ""
 
@@ -570,7 +612,7 @@ msgid "Udmurt"
 msgstr ""
 
 #: env/lib/python3.9/site-packages/django/conf/global_settings.py:142
-#: syncnote/settings.py:122
+#: syncnote/settings.py:123
 msgid "Ukrainian"
 msgstr ""
 
@@ -718,12 +760,6 @@ msgstr ""
 
 #: env/lib/python3.9/site-packages/django/contrib/admin/models.py:41
 msgid "action time"
-msgstr ""
-
-#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:48
-#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:365
-#: env/lib/python3.9/site-packages/rest_framework_simplejwt/token_blacklist/admin.py:77
-msgid "user"
 msgstr ""
 
 #: env/lib/python3.9/site-packages/django/contrib/admin/models.py:53
@@ -2325,15 +2361,6 @@ msgstr ""
 #: env/lib/python3.9/site-packages/django/contrib/flatpages/forms.py:65
 #, python-format
 msgid "Flatpage with url %(url)s already exists for site %(site)s"
-msgstr ""
-
-#: env/lib/python3.9/site-packages/django/contrib/flatpages/models.py:10
-msgid "title"
-msgstr ""
-
-#: env/lib/python3.9/site-packages/django/contrib/flatpages/models.py:11
-#: env/lib/python3.9/site-packages/rest_framework/templates/rest_framework/base.html:75
-msgid "content"
 msgstr ""
 
 #: env/lib/python3.9/site-packages/django/contrib/flatpages/models.py:12
@@ -4772,6 +4799,6 @@ msgstr ""
 msgid "Token is blacklisted"
 msgstr ""
 
-#: syncnote/settings.py:120
+#: syncnote/settings.py:121
 msgid "English-American"
 msgstr ""

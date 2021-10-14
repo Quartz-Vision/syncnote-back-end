@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-14 09:31+0000\n"
+"POT-Creation-Date: 2021-10-14 12:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +20,48 @@ msgstr ""
 "11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
 "100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
 "(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#: apps/notes/models.py:15 apps/notes/models.py:31
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:48
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:365
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/token_blacklist/admin.py:77
+msgid "user"
+msgstr "користувач"
+
+#: apps/notes/models.py:19
+msgid "text"
+msgstr "текст"
+
+#: apps/notes/models.py:35
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/models.py:10
+msgid "title"
+msgstr "заголовок"
+
+#: apps/notes/models.py:39
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/models.py:11
+#: env/lib/python3.9/site-packages/rest_framework/templates/rest_framework/base.html:75
+msgid "content"
+msgstr "вміст"
+
+#: apps/notes/models.py:44
+msgid "color"
+msgstr "колір"
+
+#: apps/notes/models.py:48
+msgid "data size"
+msgstr "кількість даних"
+
+#: apps/notes/models.py:53
+msgid "tags"
+msgstr "теги"
+
+#: apps/notes/models.py:57
+msgid "Note"
+msgstr "Нотатка"
+
+#: apps/notes/models.py:58
+msgid "Notes"
+msgstr "Нотатки"
 
 #: apps/user/templates/user/password_reset_confirm.html:22
 msgid "Reset your Syncnote account password"
@@ -198,8 +240,10 @@ msgid ""
 msgstr ""
 
 #: env/lib/python3.9/site-packages/dj_rest_auth/views.py:253
+#, fuzzy
+#| msgid "Password reset error"
 msgid "Password reset e-mail has been sent."
-msgstr ""
+msgstr "Помилка скидання пароля"
 
 #: env/lib/python3.9/site-packages/dj_rest_auth/views.py:280
 msgid "Password has been reset with the new password."
@@ -280,7 +324,7 @@ msgid "Greek"
 msgstr ""
 
 #: env/lib/python3.9/site-packages/django/conf/global_settings.py:69
-#: syncnote/settings.py:121
+#: syncnote/settings.py:122
 msgid "English"
 msgstr "Англійська"
 
@@ -577,7 +621,7 @@ msgid "Udmurt"
 msgstr ""
 
 #: env/lib/python3.9/site-packages/django/conf/global_settings.py:142
-#: syncnote/settings.py:122
+#: syncnote/settings.py:123
 msgid "Ukrainian"
 msgstr "Українська"
 
@@ -732,12 +776,6 @@ msgstr "Видалити"
 #| msgid "Date (without time)"
 msgid "action time"
 msgstr "Дата (без часу)"
-
-#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:48
-#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:365
-#: env/lib/python3.9/site-packages/rest_framework_simplejwt/token_blacklist/admin.py:77
-msgid "user"
-msgstr ""
 
 #: env/lib/python3.9/site-packages/django/contrib/admin/models.py:53
 #: env/lib/python3.9/site-packages/django/contrib/auth/models.py:62
@@ -1996,7 +2034,7 @@ msgstr ""
 #| msgctxt "placeholder"
 #| msgid "New password"
 msgid "Password"
-msgstr "Новий пароль"
+msgstr "Пароль"
 
 #: env/lib/python3.9/site-packages/django/contrib/auth/forms.py:90
 #, fuzzy
@@ -2057,7 +2095,7 @@ msgstr "Новий пароль"
 #| msgctxt "field name"
 #| msgid "Password confirmation"
 msgid "Password (again)"
-msgstr "Підтвердження пароля"
+msgstr "Пароль (підтвердження)"
 
 #: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:297
 #: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:388
@@ -2405,15 +2443,6 @@ msgstr ""
 #: env/lib/python3.9/site-packages/django/contrib/flatpages/forms.py:65
 #, python-format
 msgid "Flatpage with url %(url)s already exists for site %(site)s"
-msgstr ""
-
-#: env/lib/python3.9/site-packages/django/contrib/flatpages/models.py:10
-msgid "title"
-msgstr ""
-
-#: env/lib/python3.9/site-packages/django/contrib/flatpages/models.py:11
-#: env/lib/python3.9/site-packages/rest_framework/templates/rest_framework/base.html:75
-msgid "content"
 msgstr ""
 
 #: env/lib/python3.9/site-packages/django/contrib/flatpages/models.py:12
@@ -4999,6 +5028,6 @@ msgstr ""
 msgid "Token is blacklisted"
 msgstr ""
 
-#: syncnote/settings.py:120
+#: syncnote/settings.py:121
 msgid "English-American"
 msgstr "Англійська-Американська"
