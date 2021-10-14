@@ -27,6 +27,7 @@ urlpatterns = [
     path('watch-tower/', admin.site.urls),
     path('api/user/', include('apps.user.urls')),
     path('api/common/', include('apps.common.urls')),
+    path('api/notes/', include('apps.notes.urls')),
 ]
 
 if settings.DEBUG:
