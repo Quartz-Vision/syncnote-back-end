@@ -1,6 +1,7 @@
 from django.contrib.auth import get_user_model
+from django.urls import reverse
 from drf_yasg.utils import swagger_auto_schema
-from rest_auth.views import (
+from dj_rest_auth.views import (
     PasswordResetView,
     PasswordResetConfirmView,
 )
@@ -152,4 +153,5 @@ class CustomPasswordResetSuccessView(APIView):
         }
     )
     def get(self, *args, **kwargs):
+        print(reverse('user:password_reset_success'))
         return Response({}, template_name='user/password_reset_success.html')

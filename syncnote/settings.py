@@ -13,6 +13,7 @@ import datetime
 import os
 from pathlib import Path
 from corsheaders.defaults import default_methods, default_headers
+from django.utils.translation import ugettext_lazy as _
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,7 +43,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'rest_framework.authtoken',
-    'rest_auth',
+    'dj_rest_auth',
     'drf_yasg',
     'corsheaders',
 
@@ -115,15 +116,16 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
+LANGUAGES = [
+    ('en-us', _('English-American')),
+    ('en', _('English')),
+    ('uk', _('Ukrainian')),
+]
 
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
 
 LOCALE_PATHS = [

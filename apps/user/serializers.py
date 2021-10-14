@@ -1,7 +1,10 @@
 import django.contrib.auth.password_validation as validators
 from django.contrib.auth import get_user_model
 from django.core import exceptions
-from rest_auth.serializers import PasswordResetSerializer, PasswordResetConfirmSerializer
+from dj_rest_auth.serializers import (
+    PasswordResetSerializer,
+    PasswordResetConfirmSerializer
+)
 from rest_framework import serializers
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer, PasswordField
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-11 13:48+0300\n"
+"POT-Creation-Date: 2021-10-14 09:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,41 +21,3151 @@ msgstr ""
 "100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
 "(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
-#: apps/user/templates/user/password_reset_confirm.html:21
+#: apps/user/templates/user/password_reset_confirm.html:22
 msgid "Reset your Syncnote account password"
 msgstr "Заміна пароля від вашого акаунта Syncnote"
 
-#: apps/user/templates/user/password_reset_confirm.html:25
-msgid "New password|placeholder"
+#: apps/user/templates/user/password_reset_confirm.html:26
+msgctxt "placeholder"
+msgid "New password"
 msgstr "Новий пароль"
 
-#: apps/user/templates/user/password_reset_confirm.html:28
-msgid "Repeat the password|placeholder"
+#: apps/user/templates/user/password_reset_confirm.html:29
+msgctxt "placeholder"
+msgid "Repeat the password"
 msgstr "Повторіть пароль"
 
-#: apps/user/templates/user/password_reset_confirm.html:33
+#: apps/user/templates/user/password_reset_confirm.html:34
 msgid "Confirm"
 msgstr "Підтвердити"
 
-#: apps/user/templates/user/password_reset_confirm.html:42
-msgid "New password|field name"
+#: apps/user/templates/user/password_reset_confirm.html:43
+msgctxt "field name"
+msgid "New password"
 msgstr "Новий пароль"
 
-#: apps/user/templates/user/password_reset_confirm.html:43
-msgid "Password confirmation|field name"
+#: apps/user/templates/user/password_reset_confirm.html:44
+msgctxt "field name"
+msgid "Password confirmation"
 msgstr "Підтвердження пароля"
 
-#: apps/user/templates/user/password_reset_confirm.html:64
+#: apps/user/templates/user/password_reset_confirm.html:65
 msgid "Password reset error"
 msgstr "Помилка скидання пароля"
+
+#: apps/user/templates/user/password_reset_email.html:22
+msgctxt "Warning-email's greeting. Username follows it"
+msgid "Hi,"
+msgstr "Вітаємо,"
+
+#: apps/user/templates/user/password_reset_email.html:26
+msgid "We have received a request to reset your Syncnote password."
+msgstr "Ми отримали запит на скидання вашого пролю від Syncnote."
+
+#: apps/user/templates/user/password_reset_email.html:30
+msgid "Click the link to reset your password:"
+msgstr "Натисніть на посилання щоб скинути ваш пароль:"
+
+#: apps/user/templates/user/password_reset_email.html:34
+msgid ""
+"The link will take you to a page where you can enter a new password. When "
+"you are done, you need to return to the Syncnote app and log in with your "
+"new password."
+msgstr ""
+"Це посилання відведе вас на сторінку, де ви зможете ввести новий пароль. "
+"Коли ви закінчете, буде потрібно повернутися до додатку Syncnote та "
+"повторити вхід в акаунт з новим паролем."
+
+#: apps/user/templates/user/password_reset_email.html:38
+msgid ""
+"You don't go anywhere clicking the link? Copy and paste the link into your "
+"browser's search bar"
+msgstr ""
+"Посилання вас нікуди не перекидує? Тоді скопіюйте та вставте його в "
+"пошуковий рядок вашого браузера"
+
+#: apps/user/templates/user/password_reset_email.html:42
+msgid "If you have not requested a new password, just ignore this message"
+msgstr ""
+"Якщо ви не запитували скидання паролю, то просто проігноруйте це повідомлення"
+
+#: apps/user/templates/user/password_reset_email.html:47
+msgid "Sincerely,<br>Syncnote team<br>"
+msgstr "З поваго,<br>Команда Syncnote<br>"
+
+#: apps/user/templates/user/password_reset_email_subject.txt:2
+msgid "Syncnote - password reset"
+msgstr "Syncnote - скидання паролю"
+
+#: apps/user/templates/user/password_reset_success.html:21
+msgid "Your password has successfully been changed!"
+msgstr "Ваш пароль було успішно змінено!"
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/registration/serializers.py:76
+msgid "Define callback_url in view"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/registration/serializers.py:85
+msgid "View is not defined, pass it as a context variable"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/registration/serializers.py:90
+msgid "Define adapter_class in view"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/registration/serializers.py:116
+msgid "Define client_class in view"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/registration/serializers.py:143
+msgid "Incorrect input. access_token or code is required."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/registration/serializers.py:153
+msgid "Incorrect value"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/registration/serializers.py:167
+msgid "User is already registered with this e-mail address."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/registration/serializers.py:213
+msgid "A user is already registered with this e-mail address."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/registration/serializers.py:222
+msgid "The two password fields didn't match."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/registration/views.py:52
+msgid "Verification e-mail sent."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/registration/views.py:109
+#: env/lib/python3.9/site-packages/dj_rest_auth/registration/views.py:128
+msgid "ok"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/serializers.py:32
+msgid "Must include \"email\" and \"password\"."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/serializers.py:41
+#: env/lib/python3.9/site-packages/rest_framework/authtoken/serializers.py:38
+msgid "Must include \"username\" and \"password\"."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/serializers.py:52
+msgid "Must include either \"username\" or \"email\" and \"password\"."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/serializers.py:98
+#: env/lib/python3.9/site-packages/dj_rest_auth/serializers.py:123
+#: env/lib/python3.9/site-packages/rest_framework/authtoken/serializers.py:35
+msgid "Unable to log in with provided credentials."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/serializers.py:105
+msgid "User account is disabled."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/serializers.py:114
+msgid "E-mail is not verified."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/serializers.py:344
+#: env/lib/python3.9/site-packages/django/contrib/auth/forms.py:367
+msgid "Your old password was entered incorrectly. Please enter it again."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/views.py:162
+msgid "Successfully logged out."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/views.py:184
+msgid "Refresh token was not included in request data."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/views.py:192
+#: env/lib/python3.9/site-packages/dj_rest_auth/views.py:196
+msgid "An error has occurred."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/views.py:201
+msgid ""
+"Neither cookies or blacklist are enabled, so the token has not been deleted "
+"server side. Please make sure the token is deleted client side."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/views.py:253
+msgid "Password reset e-mail has been sent."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/views.py:280
+msgid "Password has been reset with the new password."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/dj_rest_auth/views.py:303
+#, fuzzy
+#| msgid "Your password has successfully been changed!"
+msgid "New password has been saved."
+msgstr "Ваш пароль було успішно змінено!"
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:52
+msgid "Afrikaans"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:53
+msgid "Arabic"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:54
+msgid "Algerian Arabic"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:55
+msgid "Asturian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:56
+msgid "Azerbaijani"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:57
+msgid "Bulgarian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:58
+msgid "Belarusian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:59
+msgid "Bengali"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:60
+msgid "Breton"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:61
+msgid "Bosnian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:62
+msgid "Catalan"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:63
+msgid "Czech"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:64
+msgid "Welsh"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:65
+msgid "Danish"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:66
+msgid "German"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:67
+msgid "Lower Sorbian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:68
+msgid "Greek"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:69
+#: syncnote/settings.py:121
+msgid "English"
+msgstr "Англійська"
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:70
+msgid "Australian English"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:71
+#, fuzzy
+#| msgid "English"
+msgid "British English"
+msgstr "Англійська"
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:72
+msgid "Esperanto"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:73
+msgid "Spanish"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:74
+msgid "Argentinian Spanish"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:75
+msgid "Colombian Spanish"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:76
+msgid "Mexican Spanish"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:77
+msgid "Nicaraguan Spanish"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:78
+msgid "Venezuelan Spanish"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:79
+msgid "Estonian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:80
+msgid "Basque"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:81
+msgid "Persian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:82
+msgid "Finnish"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:83
+msgid "French"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:84
+msgid "Frisian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:85
+msgid "Irish"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:86
+msgid "Scottish Gaelic"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:87
+msgid "Galician"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:88
+msgid "Hebrew"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:89
+msgid "Hindi"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:90
+msgid "Croatian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:91
+msgid "Upper Sorbian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:92
+msgid "Hungarian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:93
+msgid "Armenian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:94
+msgid "Interlingua"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:95
+msgid "Indonesian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:96
+msgid "Igbo"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:97
+msgid "Ido"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:98
+msgid "Icelandic"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:99
+msgid "Italian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:100
+msgid "Japanese"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:101
+msgid "Georgian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:102
+msgid "Kabyle"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:103
+msgid "Kazakh"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:104
+msgid "Khmer"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:105
+msgid "Kannada"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:106
+msgid "Korean"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:107
+msgid "Kyrgyz"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:108
+msgid "Luxembourgish"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:109
+msgid "Lithuanian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:110
+msgid "Latvian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:111
+msgid "Macedonian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:112
+msgid "Malayalam"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:113
+msgid "Mongolian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:114
+msgid "Marathi"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:115
+msgid "Burmese"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:116
+msgid "Norwegian Bokmål"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:117
+msgid "Nepali"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:118
+msgid "Dutch"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:119
+msgid "Norwegian Nynorsk"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:120
+msgid "Ossetic"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:121
+msgid "Punjabi"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:122
+#, fuzzy
+#| msgid "English"
+msgid "Polish"
+msgstr "Англійська"
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:123
+msgid "Portuguese"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:124
+msgid "Brazilian Portuguese"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:125
+msgid "Romanian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:126
+msgid "Russian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:127
+msgid "Slovak"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:128
+msgid "Slovenian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:129
+msgid "Albanian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:130
+msgid "Serbian"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:131
+msgid "Serbian Latin"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:132
+msgid "Swedish"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:133
+msgid "Swahili"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:134
+msgid "Tamil"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:135
+msgid "Telugu"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:136
+msgid "Tajik"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:137
+msgid "Thai"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:138
+msgid "Turkmen"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:139
+msgid "Turkish"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:140
+msgid "Tatar"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:141
+msgid "Udmurt"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:142
+#: syncnote/settings.py:122
+msgid "Ukrainian"
+msgstr "Українська"
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:143
+msgid "Urdu"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:144
+msgid "Uzbek"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:145
+msgid "Vietnamese"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:146
+msgid "Simplified Chinese"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/conf/global_settings.py:147
+msgid "Traditional Chinese"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/actions.py:16
+#, python-format
+msgid "Delete selected %(verbose_name_plural)s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/actions.py:46
+#, python-format
+msgid "Successfully deleted %(count)d %(items)s."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/actions.py:55
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:1888
+#, python-format
+msgid "Cannot delete %(name)s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/actions.py:57
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:1890
+msgid "Are you sure?"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/apps.py:13
+msgid "Administration"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/filters.py:108
+#: env/lib/python3.9/site-packages/django/contrib/admin/filters.py:213
+#: env/lib/python3.9/site-packages/django/contrib/admin/filters.py:249
+#: env/lib/python3.9/site-packages/django/contrib/admin/filters.py:284
+#: env/lib/python3.9/site-packages/django/contrib/admin/filters.py:403
+#: env/lib/python3.9/site-packages/django/contrib/admin/filters.py:468
+msgid "All"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/filters.py:250
+#: env/lib/python3.9/site-packages/django/forms/widgets.py:715
+msgid "Yes"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/filters.py:251
+#: env/lib/python3.9/site-packages/django/forms/widgets.py:716
+msgid "No"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/filters.py:262
+#: env/lib/python3.9/site-packages/django/forms/widgets.py:714
+msgid "Unknown"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/filters.py:332
+msgid "Any date"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/filters.py:333
+msgid "Today"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/filters.py:337
+msgid "Past 7 days"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/filters.py:341
+msgid "This month"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/filters.py:345
+msgid "This year"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/filters.py:353
+msgid "No date"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/filters.py:354
+msgid "Has date"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/filters.py:469
+msgid "Empty"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/filters.py:470
+msgid "Not empty"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/forms.py:13
+#, python-format
+msgid ""
+"Please enter the correct %(username)s and password for a staff account. Note "
+"that both fields may be case-sensitive."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/helpers.py:23
+msgid "Action:"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/helpers.py:333
+#, python-format
+msgid "Add another %(verbose_name)s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/helpers.py:336
+msgid "Remove"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:17
+#, fuzzy
+#| msgid "Syndication"
+msgid "Addition"
+msgstr "Syndication"
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:18
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/app_list.html:28
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/edit_inline/stacked.html:16
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/edit_inline/tabular.html:38
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/widgets/related_widget_wrapper.html:11
+#: env/lib/python3.9/site-packages/django/forms/widgets.py:405
+msgid "Change"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:19
+#, fuzzy
+#| msgid "Delete"
+msgid "Deletion"
+msgstr "Видалити"
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:41
+#, fuzzy
+#| msgid "Date (without time)"
+msgid "action time"
+msgstr "Дата (без часу)"
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:48
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:365
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/token_blacklist/admin.py:77
+msgid "user"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:53
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:62
+#: env/lib/python3.9/site-packages/django/contrib/contenttypes/models.py:139
+msgid "content type"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:56
+msgid "object id"
+msgstr ""
+
+#. Translators: 'repr' means representation (https://docs.python.org/library/functions.html#repr)
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:58
+msgid "object repr"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:59
+msgid "action flag"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:61
+msgid "change message"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:66
+msgid "log entry"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:67
+msgid "log entries"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:76
+#, python-format
+msgid "Added “%(object)s”."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:78
+#, python-format
+msgid "Changed “%(object)s” — %(changes)s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:83
+#, python-format
+msgid "Deleted “%(object)s.”"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:85
+msgid "LogEntry Object"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:111
+#, python-brace-format
+msgid "Added {name} “{object}”."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:113
+msgid "Added."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:117
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:2116
+#: env/lib/python3.9/site-packages/django/db/models/base.py:1197
+#: env/lib/python3.9/site-packages/django/forms/models.py:768
+msgid "and"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:121
+#, python-brace-format
+msgid "Changed {fields} for {name} “{object}”."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:125
+#, python-brace-format
+msgid "Changed {fields}."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:129
+#, python-brace-format
+msgid "Deleted {name} “{object}”."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/models.py:132
+msgid "No fields changed."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:203
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:235
+#: env/lib/python3.9/site-packages/rest_framework/templates/rest_framework/horizontal/radio.html:4
+#: env/lib/python3.9/site-packages/rest_framework/templates/rest_framework/inline/radio.html:3
+#: env/lib/python3.9/site-packages/rest_framework/templates/rest_framework/vertical/radio.html:3
+msgid "None"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:281
+msgid "Hold down “Control”, or “Command” on a Mac, to select more than one."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:1223
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:1247
+#, python-brace-format
+msgid "The {name} “{obj}” was added successfully."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:1225
+msgid "You may edit it again below."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:1237
+#, python-brace-format
+msgid ""
+"The {name} “{obj}” was added successfully. You may add another {name} below."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:1287
+#, python-brace-format
+msgid ""
+"The {name} “{obj}” was changed successfully. You may edit it again below."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:1297
+#, python-brace-format
+msgid "The {name} “{obj}” was added successfully. You may edit it again below."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:1310
+#, python-brace-format
+msgid ""
+"The {name} “{obj}” was changed successfully. You may add another {name} "
+"below."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:1322
+#, python-brace-format
+msgid "The {name} “{obj}” was changed successfully."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:1399
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:1729
+msgid ""
+"Items must be selected in order to perform actions on them. No items have "
+"been changed."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:1418
+msgid "No action selected."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:1443
+#, python-format
+msgid "The %(name)s “%(obj)s” was deleted successfully."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:1529
+#, python-format
+msgid "%(name)s with ID “%(key)s” doesn’t exist. Perhaps it was deleted?"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:1624
+#, python-format
+msgid "Add %s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:1626
+#, python-format
+msgid "Change %s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:1628
+#, python-format
+msgid "View %s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:1707
+msgid "Database error"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:1776
+#, python-format
+msgid "%(count)s %(name)s was changed successfully."
+msgid_plural "%(count)s %(name)s were changed successfully."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:1807
+#, python-format
+msgid "%(total_count)s selected"
+msgid_plural "All %(total_count)s selected"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:1815
+#, python-format
+msgid "0 of %(cnt)s selected"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:1935
+#, python-format
+msgid "Change history: %s"
+msgstr ""
+
+#. Translators: Model verbose name and instance representation,
+#. suitable to be an item in a list.
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:2109
+#, python-format
+msgid "%(class_name)s %(instance)s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/options.py:2118
+#, python-format
+msgid ""
+"Deleting %(class_name)s %(instance)s would require deleting the following "
+"protected related objects: %(related_objects)s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/sites.py:47
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/base_site.html:3
+msgid "Django site admin"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/sites.py:50
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/base_site.html:6
+msgid "Django administration"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/sites.py:53
+msgid "Site administration"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/sites.py:399
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/login.html:63
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_complete.html:15
+#: env/lib/python3.9/site-packages/django/contrib/admin/tests.py:135
+msgid "Log in"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/sites.py:544
+#, python-format
+msgid "%(app)s administration"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/404.html:4
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/404.html:8
+msgid "Page not found"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/404.html:10
+msgid "We’re sorry, but the requested page could not be found."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/500.html:6
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/app_index.html:9
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/auth/user/change_password.html:10
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/base.html:65
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/change_form.html:18
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/change_list.html:31
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/delete_confirmation.html:14
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/delete_selected_confirmation.html:14
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/invalid_setup.html:6
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/object_history.html:6
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/logged_out.html:4
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_change_done.html:6
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_change_form.html:7
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_complete.html:6
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_confirm.html:7
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_done.html:6
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_form.html:7
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/bookmarklets.html:6
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:6
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/missing_docutils.html:6
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html:14
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/model_index.html:8
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_detail.html:6
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_filter_index.html:7
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_tag_index.html:7
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/view_detail.html:6
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/view_index.html:7
+msgid "Home"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/500.html:7
+msgid "Server error"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/500.html:11
+msgid "Server error (500)"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/500.html:14
+msgid "Server Error <em>(500)</em>"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/500.html:15
+msgid ""
+"There’s been an error. It’s been reported to the site administrators via "
+"email and should be fixed shortly. Thanks for your patience."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/actions.html:8
+msgid "Run the selected action"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/actions.html:8
+msgid "Go"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/actions.html:16
+msgid "Click here to select the objects across all pages"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/actions.html:16
+#, python-format
+msgid "Select all %(total_count)s %(module_name)s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/actions.html:18
+msgid "Clear selection"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/app_list.html:8
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/app_list.html:19
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/widgets/related_widget_wrapper.html:18
+msgid "Add"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/app_list.html:26
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/edit_inline/stacked.html:16
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/edit_inline/tabular.html:38
+msgid "View"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/app_list.html:39
+msgid "You don’t have permission to view or edit anything."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/auth/user/add_form.html:6
+msgid ""
+"First, enter a username and password. Then, you’ll be able to edit more user "
+"options."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/auth/user/add_form.html:8
+msgid "Enter a username and password."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/auth/user/change_password.html:14
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/auth/user/change_password.html:52
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/base.html:53
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_change_done.html:3
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_change_form.html:4
+#, fuzzy
+#| msgctxt "placeholder"
+#| msgid "New password"
+msgid "Change password"
+msgstr "Новий пароль"
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/auth/user/change_password.html:25
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/change_form.html:43
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/change_list.html:51
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/login.html:23
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_change_form.html:18
+#, fuzzy
+#| msgid "Please correct the duplicate values below."
+msgid "Please correct the error below."
+msgstr "Виправде повторювані значення нижче."
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/auth/user/change_password.html:25
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/change_form.html:43
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/change_list.html:51
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/login.html:23
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_change_form.html:18
+#, fuzzy
+#| msgid "Please correct the duplicate values below."
+msgid "Please correct the errors below."
+msgstr "Виправде повторювані значення нижче."
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/auth/user/change_password.html:29
+#, python-format
+msgid "Enter a new password for the user <strong>%(username)s</strong>."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/base.html:39
+msgid "Welcome,"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/base.html:44
+msgid "View site"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/base.html:49
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_change_done.html:3
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_change_form.html:4
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/bookmarklets.html:7
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:7
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:10
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:14
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/missing_docutils.html:7
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/missing_docutils.html:14
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html:15
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/model_index.html:9
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_detail.html:7
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_filter_index.html:8
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_tag_index.html:8
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/view_detail.html:7
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/view_index.html:8
+#, fuzzy
+#| msgid "Duration"
+msgid "Documentation"
+msgstr "Тривалість"
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/base.html:55
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_change_done.html:3
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_change_form.html:4
+msgid "Log out"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/change_form.html:21
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/change_list_object_tools.html:8
+#, python-format
+msgid "Add %(name)s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/change_form_object_tools.html:5
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/object_history.html:10
+msgid "History"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/change_form_object_tools.html:7
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/edit_inline/stacked.html:18
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/edit_inline/tabular.html:40
+msgid "View on site"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/change_list.html:76
+msgid "Filter"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/change_list.html:78
+msgid "Clear all filters"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/change_list_results.html:17
+msgid "Remove from sorting"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/change_list_results.html:18
+#, python-format
+msgid "Sorting priority: %(priority_number)s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/change_list_results.html:19
+msgid "Toggle sorting"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/delete_confirmation.html:18
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/submit_line.html:7
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/widgets/related_widget_wrapper.html:25
+#: env/lib/python3.9/site-packages/django/forms/formsets.py:417
+msgid "Delete"
+msgstr "Видалити"
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/delete_confirmation.html:24
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would result in deleting "
+"related objects, but your account doesn't have permission to delete the "
+"following types of objects:"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/delete_confirmation.html:31
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would require deleting the "
+"following protected related objects:"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/delete_confirmation.html:38
+#, python-format
+msgid ""
+"Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? "
+"All of the following related items will be deleted:"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/delete_confirmation.html:40
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/delete_selected_confirmation.html:39
+#, fuzzy
+#| msgid "A JSON object"
+msgid "Objects"
+msgstr "Об'єкт JSON"
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/delete_confirmation.html:47
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/delete_selected_confirmation.html:50
+msgid "Yes, I’m sure"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/delete_confirmation.html:48
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/delete_selected_confirmation.html:51
+msgid "No, take me back"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/delete_selected_confirmation.html:17
+msgid "Delete multiple objects"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/delete_selected_confirmation.html:23
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would result in deleting related "
+"objects, but your account doesn't have permission to delete the following "
+"types of objects:"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/delete_selected_confirmation.html:30
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would require deleting the following "
+"protected related objects:"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/delete_selected_confirmation.html:37
+#, python-format
+msgid ""
+"Are you sure you want to delete the selected %(objects_name)s? All of the "
+"following objects and their related items will be deleted:"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/edit_inline/tabular.html:24
+#, fuzzy
+#| msgid "Delete"
+msgid "Delete?"
+msgstr "Видалити"
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/filter.html:2
+#, python-format
+msgid " By %(filter_title)s "
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/includes/object_delete_summary.html:2
+msgid "Summary"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/index.html:23
+msgid "Recent actions"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/index.html:24
+msgid "My actions"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/index.html:28
+msgid "None available"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/index.html:42
+msgid "Unknown content"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/invalid_setup.html:12
+msgid ""
+"Something’s wrong with your database installation. Make sure the appropriate "
+"database tables have been created, and make sure the database is readable by "
+"the appropriate user."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/login.html:39
+#, python-format
+msgid ""
+"You are authenticated as %(username)s, but are not authorized to access this "
+"page. Would you like to login to a different account?"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/login.html:59
+msgid "Forgotten your password or username?"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/nav_sidebar.html:2
+msgid "Toggle navigation"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/object_history.html:22
+#, fuzzy
+#| msgid "Date (with time)"
+msgid "Date/time"
+msgstr "Дата (з часом)"
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/object_history.html:23
+#: env/lib/python3.9/site-packages/rest_framework/authtoken/models.py:16
+msgid "User"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/object_history.html:24
+msgid "Action"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/object_history.html:38
+msgid ""
+"This object doesn’t have a change history. It probably wasn’t added via this "
+"admin site."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/pagination.html:10
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/search_form.html:9
+msgid "Show all"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/pagination.html:11
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/submit_line.html:4
+msgid "Save"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/popup_response.html:3
+msgid "Popup closing…"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/search_form.html:7
+#: env/lib/python3.9/site-packages/rest_framework/filters.py:49
+#: env/lib/python3.9/site-packages/rest_framework/templates/rest_framework/filters/search.html:2
+#: env/lib/python3.9/site-packages/rest_framework/templates/rest_framework/filters/search.html:8
+msgid "Search"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/search_form.html:9
+#, python-format
+msgid "%(counter)s result"
+msgid_plural "%(counter)s results"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/search_form.html:9
+#, python-format
+msgid "%(full_result_count)s total"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/submit_line.html:9
+msgid "Save as new"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/submit_line.html:10
+msgid "Save and add another"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/submit_line.html:11
+msgid "Save and continue editing"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/submit_line.html:11
+msgid "Save and view"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/submit_line.html:12
+msgid "Close"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/widgets/related_widget_wrapper.html:10
+#, python-format
+msgid "Change selected %(model)s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/widgets/related_widget_wrapper.html:17
+#, python-format
+msgid "Add another %(model)s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/admin/widgets/related_widget_wrapper.html:24
+#, python-format
+msgid "Delete selected %(model)s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/logged_out.html:10
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/logged_out.html:12
+msgid "Log in again"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_change_done.html:7
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_change_form.html:8
+#: env/lib/python3.9/site-packages/django/contrib/auth/views.py:334
+#, fuzzy
+#| msgctxt "field name"
+#| msgid "Password confirmation"
+msgid "Password change"
+msgstr "Підтвердження пароля"
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_change_done.html:12
+#, fuzzy
+#| msgid "Your password has successfully been changed!"
+msgid "Your password was changed."
+msgstr "Ваш пароль було успішно змінено!"
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_change_form.html:23
+msgid ""
+"Please enter your old password, for security’s sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_change_form.html:51
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_confirm.html:31
+#, fuzzy
+#| msgctxt "placeholder"
+#| msgid "New password"
+msgid "Change my password"
+msgstr "Новий пароль"
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_complete.html:7
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_done.html:7
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_form.html:8
+#: env/lib/python3.9/site-packages/django/contrib/auth/views.py:217
+#, fuzzy
+#| msgid "Password reset error"
+msgid "Password reset"
+msgstr "Помилка скидання пароля"
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_complete.html:13
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_confirm.html:8
+#, fuzzy
+#| msgctxt "field name"
+#| msgid "Password confirmation"
+msgid "Password reset confirmation"
+msgstr "Підтвердження пароля"
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_confirm.html:16
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_confirm.html:23
+#, fuzzy
+#| msgctxt "placeholder"
+#| msgid "New password"
+msgid "New password:"
+msgstr "Новий пароль"
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_confirm.html:28
+#, fuzzy
+#| msgctxt "placeholder"
+#| msgid "New password"
+msgid "Confirm password:"
+msgstr "Новий пароль"
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_confirm.html:37
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_done.html:13
+msgid ""
+"We’ve emailed you instructions for setting your password, if an account "
+"exists with the email you entered. You should receive them shortly."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_done.html:15
+msgid ""
+"If you don’t receive an email, please make sure you’ve entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_email.html:2
+#, python-format
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_email.html:8
+msgid "Your username, in case you’ve forgotten:"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_email.html:12
+#, python-format
+msgid "The %(site_name)s team"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_form.html:14
+msgid ""
+"Forgotten your password? Enter your email address below, and we’ll email "
+"instructions for setting a new one."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_form.html:20
+#, fuzzy
+#| msgid "Email address"
+msgid "Email address:"
+msgstr "E-mail адреса"
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templates/registration/password_reset_form.html:23
+#, fuzzy
+#| msgctxt "placeholder"
+#| msgid "Repeat the password"
+msgid "Reset my password"
+msgstr "Повторіть пароль"
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/templatetags/admin_list.py:390
+msgid "All dates"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/views/main.py:102
+#, python-format
+msgid "Select %s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/views/main.py:104
+#, python-format
+msgid "Select %s to change"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/views/main.py:106
+#, python-format
+msgid "Select %s to view"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/widgets.py:87
+msgid "Date:"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/widgets.py:88
+#, fuzzy
+#| msgid "Time"
+msgid "Time:"
+msgstr "Час"
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/widgets.py:150
+msgid "Lookup"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/widgets.py:340
+msgid "Currently:"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admin/widgets.py:341
+msgid "Change:"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/apps.py:7
+msgid "Administrative Documentation"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/bookmarklets.html:8
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:29
+msgid "Bookmarklets"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/bookmarklets.html:11
+msgid "Documentation bookmarklets"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/bookmarklets.html:15
+msgid ""
+"To install bookmarklets, drag the link to your bookmarks toolbar, or right-"
+"click the link and add it to your bookmarks. Now you can select the "
+"bookmarklet from any page in the site."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/bookmarklets.html:22
+msgid "Documentation for this page"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/bookmarklets.html:23
+msgid ""
+"Jumps you from any page to the documentation for the view that generates "
+"that page."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:17
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_tag_index.html:9
+msgid "Tags"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:18
+msgid "List of all the template tags and their functions."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:20
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_filter_index.html:9
+#: env/lib/python3.9/site-packages/rest_framework/templates/rest_framework/admin.html:130
+#: env/lib/python3.9/site-packages/rest_framework/templates/rest_framework/base.html:150
+msgid "Filters"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:21
+msgid ""
+"Filters are actions which can be applied to variables in a template to alter "
+"the output."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:23
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html:16
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/model_index.html:10
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/model_index.html:14
+msgid "Models"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:24
+msgid ""
+"Models are descriptions of all the objects in the system and their "
+"associated fields. Each model has a list of fields which can be accessed as "
+"template variables"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:26
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/view_detail.html:8
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/view_index.html:9
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/view_index.html:12
+msgid "Views"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:27
+msgid ""
+"Each page on the public site is generated by a view. The view defines which "
+"template is used to generate the page and which objects are available to "
+"that template."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/index.html:30
+msgid "Tools for your browser to quickly access admin functionality."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/missing_docutils.html:10
+msgid "Please install docutils"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/missing_docutils.html:17
+#, python-format
+msgid ""
+"The admin documentation system requires Python’s <a href=\"%(link)s"
+"\">docutils</a> library."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/missing_docutils.html:19
+#, python-format
+msgid ""
+"Please ask your administrators to install <a href=\"%(link)s\">docutils</a>."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html:21
+#, python-format
+msgid "Model: %(name)s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html:30
+msgid "Fields"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html:35
+msgid "Field"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html:36
+msgid "Type"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html:37
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html:60
+#, fuzzy
+#| msgid "Duration"
+msgid "Description"
+msgstr "Тривалість"
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html:53
+msgid "Methods with arguments"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html:58
+msgid "Method"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html:59
+msgid "Arguments"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html:76
+msgid "Back to Model documentation"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/model_index.html:18
+msgid "Model documentation"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/model_index.html:43
+msgid "Model groups"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_detail.html:8
+msgid "Templates"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_detail.html:13
+#, python-format
+msgid "Template: %(name)s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_detail.html:16
+#, python-format
+msgid "Template: <q>%(name)s</q>"
+msgstr ""
+
+#. Translators: Search is not a verb here, it qualifies path (a search path)
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_detail.html:19
+#, python-format
+msgid "Search path for template <q>%(name)s</q>:"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_detail.html:22
+msgid "(does not exist)"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_detail.html:26
+msgid "Back to Documentation"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_filter_index.html:12
+msgid "Template filters"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_filter_index.html:16
+msgid "Template filter documentation"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_filter_index.html:22
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_filter_index.html:43
+msgid "Built-in filters"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_filter_index.html:23
+#, python-format
+msgid ""
+"To use these filters, put <code>%(code)s</code> in your template before "
+"using the filter."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_tag_index.html:12
+msgid "Template tags"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_tag_index.html:16
+msgid "Template tag documentation"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_tag_index.html:22
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_tag_index.html:43
+msgid "Built-in tags"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/template_tag_index.html:23
+#, python-format
+msgid ""
+"To use these tags, put <code>%(code)s</code> in your template before using "
+"the tag."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/view_detail.html:12
+#, python-format
+msgid "View: %(name)s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/view_detail.html:23
+msgid "Context:"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/view_detail.html:28
+msgid "Templates:"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/view_detail.html:32
+msgid "Back to View documentation"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/view_index.html:16
+msgid "View documentation"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/view_index.html:22
+msgid "Jump to namespace"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/view_index.html:27
+msgid "Empty namespace"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/view_index.html:40
+#, python-format
+msgid "Views by namespace %(name)s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/view_index.html:42
+msgid "Views by empty namespace"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/templates/admin_doc/view_index.html:49
+#, python-format
+msgid ""
+"\n"
+"    View function: <code>%(full_name)s</code>. Name: <code>%(url_name)s</"
+"code>.\n"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:73
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:74
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:76
+msgid "tag:"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:104
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:105
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:107
+msgid "filter:"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:163
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:164
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:166
+msgid "view:"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:193
+#, python-format
+msgid "App %(app_label)r not found"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:197
+#, python-format
+msgid "Model %(model_name)r not found in app %(app_label)r"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:202
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:203
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:218
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:241
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:246
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:261
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:302
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:307
+msgid "model:"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:214
+#, python-format
+msgid "the related `%(app_label)s.%(data_type)s` object"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:234
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:294
+#, python-format
+msgid "related `%(app_label)s.%(object_name)s` objects"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:241
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:302
+#, python-format
+msgid "all %s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:246
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:307
+#, python-format
+msgid "number of %s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/admindocs/views.py:399
+#, python-format
+msgid "%s does not appear to be a urlpattern object"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/admin.py:46
+msgid "Personal info"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/admin.py:47
+msgid "Permissions"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/admin.py:50
+msgid "Important dates"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/admin.py:134
+#, python-format
+msgid "%(name)s object with primary key %(key)r does not exist."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/admin.py:144
+#, fuzzy
+#| msgid "Your password has successfully been changed!"
+msgid "Password changed successfully."
+msgstr "Ваш пароль було успішно змінено!"
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/admin.py:164
+#, fuzzy, python-format
+#| msgctxt "placeholder"
+#| msgid "New password"
+msgid "Change password: %s"
+msgstr "Новий пароль"
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/apps.py:16
+msgid "Authentication and Authorization"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/base_user.py:49
+#, fuzzy
+#| msgctxt "placeholder"
+#| msgid "New password"
+msgid "password"
+msgstr "Новий пароль"
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/base_user.py:50
+msgid "last login"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/forms.py:41
+#, fuzzy
+#| msgctxt "placeholder"
+#| msgid "New password"
+msgid "No password set."
+msgstr "Новий пароль"
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/forms.py:46
+msgid "Invalid password format or unknown hashing algorithm."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/forms.py:81
+#: env/lib/python3.9/site-packages/django/contrib/auth/forms.py:322
+#: env/lib/python3.9/site-packages/django/contrib/auth/forms.py:395
+msgid "The two password fields didn’t match."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/forms.py:84
+#: env/lib/python3.9/site-packages/django/contrib/auth/forms.py:137
+#: env/lib/python3.9/site-packages/django/contrib/auth/forms.py:167
+#: env/lib/python3.9/site-packages/django/contrib/auth/forms.py:399
+#: env/lib/python3.9/site-packages/rest_framework/authtoken/serializers.py:13
+#, fuzzy
+#| msgctxt "placeholder"
+#| msgid "New password"
+msgid "Password"
+msgstr "Новий пароль"
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/forms.py:90
+#, fuzzy
+#| msgctxt "field name"
+#| msgid "Password confirmation"
+msgid "Password confirmation"
+msgstr "Підтвердження пароля"
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/forms.py:93
+#: env/lib/python3.9/site-packages/django/contrib/auth/forms.py:408
+msgid "Enter the same password as before, for verification."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/forms.py:139
+msgid ""
+"Raw passwords are not stored, so there is no way to see this user’s "
+"password, but you can change the password using <a href=\"{}\">this form</a>."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/forms.py:174
+#, python-format
+msgid ""
+"Please enter a correct %(username)s and password. Note that both fields may "
+"be case-sensitive."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/forms.py:177
+msgid "This account is inactive."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/forms.py:240
+msgid "Email"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/forms.py:325
+#, fuzzy
+#| msgctxt "placeholder"
+#| msgid "New password"
+msgid "New password"
+msgstr "Новий пароль"
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/forms.py:331
+#, fuzzy
+#| msgctxt "field name"
+#| msgid "Password confirmation"
+msgid "New password confirmation"
+msgstr "Підтвердження пароля"
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/forms.py:370
+#, fuzzy
+#| msgctxt "placeholder"
+#| msgid "New password"
+msgid "Old password"
+msgstr "Новий пароль"
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/forms.py:405
+#, fuzzy
+#| msgctxt "field name"
+#| msgid "Password confirmation"
+msgid "Password (again)"
+msgstr "Підтвердження пароля"
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:297
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:388
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:477
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:544
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:586
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:633
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:677
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:723
+msgid "algorithm"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:298
+#, fuzzy
+#| msgid "Duration"
+msgid "iterations"
+msgstr "Тривалість"
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:299
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:394
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:479
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:545
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:587
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:724
+msgid "salt"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:300
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:395
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:546
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:588
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:634
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:678
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:725
+msgid "hash"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:389
+msgid "variety"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:390
+msgid "version"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:391
+msgid "memory cost"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:392
+msgid "time cost"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:393
+msgid "parallelism"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:478
+msgid "work factor"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/hashers.py:480
+msgid "checksum"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:58
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:109
+msgid "name"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:64
+msgid "codename"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:69
+msgid "permission"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:70
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:112
+msgid "permissions"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:119
+msgid "group"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:120
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:247
+msgid "groups"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:238
+msgid "superuser status"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:241
+msgid ""
+"Designates that this user has all permissions without explicitly assigning "
+"them."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:250
+msgid ""
+"The groups this user belongs to. A user will get all permissions granted to "
+"each of their groups."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:258
+msgid "user permissions"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:260
+msgid "Specific permissions for this user."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:331
+msgid "username"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:334
+msgid "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:337
+msgid "A user with that username already exists."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:340
+msgid "first name"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:341
+msgid "last name"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:342
+#, fuzzy
+#| msgid "Email address"
+msgid "email address"
+msgstr "E-mail адреса"
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:344
+msgid "staff status"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:346
+msgid "Designates whether the user can log into this admin site."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:349
+msgid "active"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:352
+msgid ""
+"Designates whether this user should be treated as active. Unselect this "
+"instead of deleting accounts."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:356
+msgid "date joined"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/models.py:366
+msgid "users"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/password_validation.py:102
+#, python-format
+msgid ""
+"This password is too short. It must contain at least %(min_length)d "
+"character."
+msgid_plural ""
+"This password is too short. It must contain at least %(min_length)d "
+"characters."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/password_validation.py:112
+#, python-format
+msgid "Your password must contain at least %(min_length)d character."
+msgid_plural "Your password must contain at least %(min_length)d characters."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/password_validation.py:151
+#, python-format
+msgid "The password is too similar to the %(verbose_name)s."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/password_validation.py:157
+msgid "Your password can’t be too similar to your other personal information."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/password_validation.py:183
+msgid "This password is too common."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/password_validation.py:188
+msgid "Your password can’t be a commonly used password."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/password_validation.py:198
+msgid "This password is entirely numeric."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/password_validation.py:203
+msgid "Your password can’t be entirely numeric."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/templates/registration/password_reset_subject.txt:2
+#, fuzzy, python-format
+#| msgid "Password reset error"
+msgid "Password reset on %(site_name)s"
+msgstr "Помилка скидання пароля"
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/validators.py:12
+msgid ""
+"Enter a valid username. This value may contain only English letters, "
+"numbers, and @/./+/-/_ characters."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/validators.py:22
+#, fuzzy
+#| msgid ""
+#| "Enter a valid “slug” consisting of letters, numbers, underscores or "
+#| "hyphens."
+msgid ""
+"Enter a valid username. This value may contain only letters, numbers, and "
+"@/./+/-/_ characters."
+msgstr ""
+"Введіть коректний “slug”, що складається з літер, цифр, підкреслень або "
+"дефісів."
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/views.py:160
+msgid "Logged out"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/views.py:244
+#, fuzzy
+#| msgid "Password reset error"
+msgid "Password reset sent"
+msgstr "Помилка скидання пароля"
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/views.py:254
+#, fuzzy
+#| msgctxt "placeholder"
+#| msgid "New password"
+msgid "Enter new password"
+msgstr "Новий пароль"
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/views.py:314
+#, fuzzy
+#| msgid "Password reset error"
+msgid "Password reset unsuccessful"
+msgstr "Помилка скидання пароля"
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/views.py:322
+#, fuzzy
+#| msgid "Password reset error"
+msgid "Password reset complete"
+msgstr "Помилка скидання пароля"
+
+#: env/lib/python3.9/site-packages/django/contrib/auth/views.py:357
+#, fuzzy
+#| msgid "Your password has successfully been changed!"
+msgid "Password change successful"
+msgstr "Ваш пароль було успішно змінено!"
+
+#: env/lib/python3.9/site-packages/django/contrib/contenttypes/apps.py:17
+msgid "Content Types"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/contenttypes/models.py:135
+msgid "python model class name"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/contenttypes/models.py:140
+msgid "content types"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/contenttypes/views.py:18
+#, python-format
+msgid "Content type %(ct_id)s object has no associated model"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/contenttypes/views.py:24
+#, python-format
+msgid "Content type %(ct_id)s object %(obj_id)s doesn’t exist"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/contenttypes/views.py:32
+#, python-format
+msgid "%(ct_name)s objects don’t have a get_absolute_url() method"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/admin.py:12
+msgid "Advanced options"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/apps.py:8
+msgid "Flat Pages"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/forms.py:10
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/models.py:9
+#: env/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2312
+msgid "URL"
+msgstr "URL"
+
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/forms.py:13
+msgid ""
+"Example: “/about/contact/”. Make sure to have leading and trailing slashes."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/forms.py:16
+#, fuzzy
+#| msgid ""
+#| "Enter a valid “slug” consisting of letters, numbers, underscores or "
+#| "hyphens."
+msgid ""
+"This value must contain only letters, numbers, dots, underscores, dashes, "
+"slashes or tildes."
+msgstr ""
+"Введіть коректний “slug”, що складається з літер, цифр, підкреслень або "
+"дефісів."
+
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/forms.py:30
+msgid "Example: “/about/contact”. Make sure to have a leading slash."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/forms.py:43
+msgid "URL is missing a leading slash."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/forms.py:48
+msgid "URL is missing a trailing slash."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/forms.py:65
+#, python-format
+msgid "Flatpage with url %(url)s already exists for site %(site)s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/models.py:10
+msgid "title"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/models.py:11
+#: env/lib/python3.9/site-packages/rest_framework/templates/rest_framework/base.html:75
+msgid "content"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/models.py:12
+msgid "enable comments"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/models.py:14
+msgid "template name"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/models.py:18
+msgid ""
+"Example: “flatpages/contact_page.html”. If this isn’t provided, the system "
+"will use “flatpages/default.html”."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/models.py:23
+msgid "registration required"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/models.py:24
+msgid "If this is checked, only logged-in users will be able to view the page."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/models.py:27
+#: env/lib/python3.9/site-packages/django/contrib/sites/models.py:93
+msgid "sites"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/models.py:31
+msgid "flat page"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/flatpages/models.py:32
+msgid "flat pages"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/gis/apps.py:9
+msgid "GIS"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/gis/db/models/fields.py:64
+msgid "The base GIS field."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/gis/db/models/fields.py:205
+msgid ""
+"The base Geometry field — maps to the OpenGIS Specification Geometry type."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/gis/db/models/fields.py:289
+msgid "Point"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/gis/db/models/fields.py:296
+msgid "Line string"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/gis/db/models/fields.py:303
+msgid "Polygon"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/gis/db/models/fields.py:310
+msgid "Multi-point"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/gis/db/models/fields.py:317
+msgid "Multi-line string"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/gis/db/models/fields.py:324
+msgid "Multi polygon"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/gis/db/models/fields.py:331
+msgid "Geometry collection"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/gis/db/models/fields.py:337
+msgid "Extent Aggregate Field"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/gis/db/models/fields.py:352
+msgid "Raster Field"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/gis/forms/fields.py:20
+msgid "No geometry value provided."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/gis/forms/fields.py:21
+#, fuzzy
+#| msgid "Enter a valid value."
+msgid "Invalid geometry value."
+msgstr "Введіть коректне значення."
+
+#: env/lib/python3.9/site-packages/django/contrib/gis/forms/fields.py:22
+msgid "Invalid geometry type."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/gis/forms/fields.py:23
+msgid ""
+"An error occurred when transforming the geometry to the SRID of the geometry "
+"form field."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/gis/templates/gis/admin/openlayers.html:26
+#: env/lib/python3.9/site-packages/django/contrib/gis/templates/gis/openlayers.html:12
+msgid "Delete all Features"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/gis/templates/gis/admin/openlayers.html:28
+msgid "WKT debugging window:"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/gis/templates/gis/openlayers.html:13
+msgid "Debugging window (serialized value)"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/gis/views.py:8
+msgid "No feeds are registered."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/gis/views.py:14
+#, python-format
+msgid "Slug %r isn’t registered."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/apps.py:7
+msgid "Humanize"
+msgstr ""
+
+#. Translators: Ordinal format for 11 (11th), 12 (12th), and 13 (13th).
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:30
+msgctxt "ordinal 11, 12, 13"
+msgid "{}th"
+msgstr ""
+
+#. Translators: Ordinal format when value ends with 0, e.g. 80th.
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:34
+msgctxt "ordinal 0"
+msgid "{}th"
+msgstr ""
+
+#. Translators: Ordinal format when value ends with 1, e.g. 81st, except 11.
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:36
+msgctxt "ordinal 1"
+msgid "{}st"
+msgstr ""
+
+#. Translators: Ordinal format when value ends with 2, e.g. 82nd, except 12.
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:38
+msgctxt "ordinal 2"
+msgid "{}nd"
+msgstr ""
+
+#. Translators: Ordinal format when value ends with 3, e.g. 83th, except 13.
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:40
+msgctxt "ordinal 3"
+msgid "{}rd"
+msgstr ""
+
+#. Translators: Ordinal format when value ends with 4, e.g. 84th.
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:42
+msgctxt "ordinal 4"
+msgid "{}th"
+msgstr ""
+
+#. Translators: Ordinal format when value ends with 5, e.g. 85th.
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:44
+msgctxt "ordinal 5"
+msgid "{}th"
+msgstr ""
+
+#. Translators: Ordinal format when value ends with 6, e.g. 86th.
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:46
+msgctxt "ordinal 6"
+msgid "{}th"
+msgstr ""
+
+#. Translators: Ordinal format when value ends with 7, e.g. 87th.
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:48
+msgctxt "ordinal 7"
+msgid "{}th"
+msgstr ""
+
+#. Translators: Ordinal format when value ends with 8, e.g. 88th.
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:50
+msgctxt "ordinal 8"
+msgid "{}th"
+msgstr ""
+
+#. Translators: Ordinal format when value ends with 9, e.g. 89th.
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:52
+msgctxt "ordinal 9"
+msgid "{}th"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:83
+#, python-format
+msgid "%(value)s million"
+msgid_plural "%(value)s million"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:84
+#, python-format
+msgid "%(value)s billion"
+msgid_plural "%(value)s billion"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:85
+#, python-format
+msgid "%(value)s trillion"
+msgid_plural "%(value)s trillion"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:86
+#, python-format
+msgid "%(value)s quadrillion"
+msgid_plural "%(value)s quadrillion"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:87
+#, python-format
+msgid "%(value)s quintillion"
+msgid_plural "%(value)s quintillion"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:88
+#, python-format
+msgid "%(value)s sextillion"
+msgid_plural "%(value)s sextillion"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:89
+#, python-format
+msgid "%(value)s septillion"
+msgid_plural "%(value)s septillion"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:90
+#, python-format
+msgid "%(value)s octillion"
+msgid_plural "%(value)s octillion"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:91
+#, python-format
+msgid "%(value)s nonillion"
+msgid_plural "%(value)s nonillion"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:92
+#, python-format
+msgid "%(value)s decillion"
+msgid_plural "%(value)s decillion"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:93
+#, python-format
+msgid "%(value)s googol"
+msgid_plural "%(value)s googol"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:136
+msgid "one"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:136
+msgid "two"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:136
+msgid "three"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:136
+msgid "four"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:136
+msgid "five"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:137
+msgid "six"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:137
+msgid "seven"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:137
+msgid "eight"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:137
+msgid "nine"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:158
+msgid "today"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:160
+msgid "tomorrow"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:162
+msgid "yesterday"
+msgstr ""
+
+#. Translators: delta will contain a string like '2 months' or '1 month, 2 weeks'
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:180
+#, python-format
+msgid "%(delta)s ago"
+msgstr ""
+
+#. Translators: please keep a non-breaking space (U+00A0) between count
+#. and time unit.
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:183
+#, python-format
+msgid "an hour ago"
+msgid_plural "%(count)s hours ago"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. Translators: please keep a non-breaking space (U+00A0) between count
+#. and time unit.
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:186
+#, python-format
+msgid "a minute ago"
+msgid_plural "%(count)s minutes ago"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. Translators: please keep a non-breaking space (U+00A0) between count
+#. and time unit.
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:189
+#, python-format
+msgid "a second ago"
+msgid_plural "%(count)s seconds ago"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:190
+msgid "now"
+msgstr ""
+
+#. Translators: please keep a non-breaking space (U+00A0) between count
+#. and time unit.
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:193
+#, python-format
+msgid "a second from now"
+msgid_plural "%(count)s seconds from now"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. Translators: please keep a non-breaking space (U+00A0) between count
+#. and time unit.
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:196
+#, python-format
+msgid "a minute from now"
+msgid_plural "%(count)s minutes from now"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. Translators: please keep a non-breaking space (U+00A0) between count
+#. and time unit.
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:199
+#, python-format
+msgid "an hour from now"
+msgid_plural "%(count)s hours from now"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. Translators: delta will contain a string like '2 months' or '1 month, 2 weeks'
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:201
+#, python-format
+msgid "%(delta)s from now"
+msgstr ""
+
+#. Translators: 'naturaltime-past' strings will be included in '%(delta)s ago'
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:205
+#, python-format
+msgctxt "naturaltime-past"
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:206
+#, python-format
+msgctxt "naturaltime-past"
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:207
+#, python-format
+msgctxt "naturaltime-past"
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:208
+#, python-format
+msgctxt "naturaltime-past"
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:209
+#, python-format
+msgctxt "naturaltime-past"
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:210
+#, python-format
+msgctxt "naturaltime-past"
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. Translators: 'naturaltime-future' strings will be included in '%(delta)s from now'
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:214
+#, python-format
+msgctxt "naturaltime-future"
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:215
+#, python-format
+msgctxt "naturaltime-future"
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:216
+#, python-format
+msgctxt "naturaltime-future"
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:217
+#, python-format
+msgctxt "naturaltime-future"
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:218
+#, python-format
+msgctxt "naturaltime-future"
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/humanize/templatetags/humanize.py:219
+#, python-format
+msgctxt "naturaltime-future"
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: env/lib/python3.9/site-packages/django/contrib/messages/apps.py:7
 msgid "Messages"
 msgstr "Повідомлення"
 
+#: env/lib/python3.9/site-packages/django/contrib/postgres/apps.py:45
+msgid "PostgreSQL extensions"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/postgres/fields/array.py:21
+#: env/lib/python3.9/site-packages/django/contrib/postgres/forms/array.py:16
+#: env/lib/python3.9/site-packages/django/contrib/postgres/forms/array.py:170
+#, python-format
+msgid "Item %(nth)s in the array did not validate:"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/postgres/fields/array.py:22
+msgid "Nested arrays must have the same length."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/postgres/fields/hstore.py:15
+msgid "Map of strings to strings/nulls"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/postgres/fields/hstore.py:17
+#, python-format
+msgid "The value of “%(key)s” is not a string or null."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/postgres/forms/hstore.py:16
+msgid "Could not load JSON data."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/postgres/forms/hstore.py:17
+msgid "Input must be a JSON dictionary."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/postgres/forms/ranges.py:33
+#, fuzzy
+#| msgid "Enter a valid value."
+msgid "Enter two valid values."
+msgstr "Введіть коректне значення."
+
+#: env/lib/python3.9/site-packages/django/contrib/postgres/forms/ranges.py:34
+msgid "The start of the range must not exceed the end of the range."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/postgres/forms/ranges.py:82
+#, fuzzy
+#| msgid "Enter a whole number."
+msgid "Enter two whole numbers."
+msgstr "Введіть ціле число."
+
+#: env/lib/python3.9/site-packages/django/contrib/postgres/forms/ranges.py:88
+#, fuzzy
+#| msgid "Enter a whole number."
+msgid "Enter two numbers."
+msgstr "Введіть ціле число."
+
+#: env/lib/python3.9/site-packages/django/contrib/postgres/forms/ranges.py:94
+#, fuzzy
+#| msgid "Enter a valid date/time."
+msgid "Enter two valid date/times."
+msgstr "Введіть валідну дату/час."
+
+#: env/lib/python3.9/site-packages/django/contrib/postgres/forms/ranges.py:100
+#, fuzzy
+#| msgid "Enter a valid date."
+msgid "Enter two valid dates."
+msgstr "Введіть правильну дату."
+
+#: env/lib/python3.9/site-packages/django/contrib/postgres/validators.py:12
+#, python-format
+msgid ""
+"List contains %(show_value)d item, it should contain no more than "
+"%(limit_value)d."
+msgid_plural ""
+"List contains %(show_value)d items, it should contain no more than "
+"%(limit_value)d."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/postgres/validators.py:19
+#, python-format
+msgid ""
+"List contains %(show_value)d item, it should contain no fewer than "
+"%(limit_value)d."
+msgid_plural ""
+"List contains %(show_value)d items, it should contain no fewer than "
+"%(limit_value)d."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: env/lib/python3.9/site-packages/django/contrib/postgres/validators.py:29
+#, python-format
+msgid "Some keys were missing: %(keys)s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/postgres/validators.py:30
+#, python-format
+msgid "Some unknown keys were provided: %(keys)s"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/postgres/validators.py:70
+#, fuzzy, python-format
+#| msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgid ""
+"Ensure that this range is completely less than or equal to %(limit_value)s."
+msgstr "Переконайтесь що це значення менше або дорівнює %(limit_value)s."
+
+#: env/lib/python3.9/site-packages/django/contrib/postgres/validators.py:76
+#, fuzzy, python-format
+#| msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgid ""
+"Ensure that this range is completely greater than or equal to "
+"%(limit_value)s."
+msgstr "Переконайтесь що це значення більше або дорівнює %(limit_value)s."
+
+#: env/lib/python3.9/site-packages/django/contrib/redirects/apps.py:8
+msgid "Redirects"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/redirects/models.py:7
+#: env/lib/python3.9/site-packages/django/contrib/sites/models.py:92
+msgid "site"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/redirects/models.py:9
+msgid "redirect from"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/redirects/models.py:12
+msgid ""
+"This should be an absolute path, excluding the domain name. Example: “/"
+"events/search/”."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/redirects/models.py:15
+msgid "redirect to"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/redirects/models.py:19
+msgid ""
+"This can be either an absolute path (as above) or a full URL starting with a "
+"scheme such as “https://”."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/redirects/models.py:25
+msgid "redirect"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/redirects/models.py:26
+msgid "redirects"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/sessions/apps.py:7
+msgid "Sessions"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/sessions/base_session.py:27
+msgid "session key"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/sessions/base_session.py:28
+msgid "session data"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/sessions/base_session.py:29
+msgid "expire date"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/sessions/base_session.py:35
+msgid "session"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/sessions/base_session.py:36
+msgid "sessions"
+msgstr ""
+
 #: env/lib/python3.9/site-packages/django/contrib/sitemaps/apps.py:8
 msgid "Site Maps"
 msgstr "Карти сайту"
+
+#: env/lib/python3.9/site-packages/django/contrib/sites/apps.py:13
+#, fuzzy
+#| msgid "Site Maps"
+msgid "Sites"
+msgstr "Карти сайту"
+
+#: env/lib/python3.9/site-packages/django/contrib/sites/models.py:20
+msgid "The domain name cannot contain any spaces or tabs."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/sites/models.py:81
+msgid "domain name"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/django/contrib/sites/models.py:86
+msgid "display name"
+msgstr ""
 
 #: env/lib/python3.9/site-packages/django/contrib/staticfiles/apps.py:9
 msgid "Static Files"
@@ -89,6 +3199,7 @@ msgstr "Введіть коректне значення."
 
 #: env/lib/python3.9/site-packages/django/core/validators.py:93
 #: env/lib/python3.9/site-packages/django/forms/fields.py:675
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:854
 msgid "Enter a valid URL."
 msgstr "Введіть коректне посилання."
 
@@ -97,17 +3208,25 @@ msgid "Enter a valid integer."
 msgstr "Введіть коректне число."
 
 #: env/lib/python3.9/site-packages/django/core/validators.py:161
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:816
 msgid "Enter a valid email address."
 msgstr "Введіть коректну e-mael адресу."
 
 #. Translators: "letters" means latin letters: a-z and A-Z.
 #: env/lib/python3.9/site-packages/django/core/validators.py:262
-msgid "Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
-msgstr "Введіть коректний “slug”, що складається з літер, цифр, підкреслень або дефісів."
+msgid ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+"Введіть коректний “slug”, що складається з літер, цифр, підкреслень або "
+"дефісів."
 
 #: env/lib/python3.9/site-packages/django/core/validators.py:269
-msgid "Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or hyphens."
-msgstr "Введіть коректний “slug”, що складається з символів юнікоду, цифр, підкреслень або дефісів."
+msgid ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+"Введіть коректний “slug”, що складається з символів юнікоду, цифр, "
+"підкреслень або дефісів."
 
 #: env/lib/python3.9/site-packages/django/core/validators.py:278
 #: env/lib/python3.9/site-packages/django/core/validators.py:288
@@ -122,6 +3241,7 @@ msgstr "Введіть коректну IPv6 адресу."
 
 #: env/lib/python3.9/site-packages/django/core/validators.py:306
 #: env/lib/python3.9/site-packages/django/core/validators.py:310
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:903
 msgid "Enter a valid IPv4 or IPv6 address."
 msgstr "Введіть коректну IPv4 або IPv6 адресу."
 
@@ -152,8 +3272,12 @@ msgid ""
 msgid_plural ""
 "Ensure this value has at least %(limit_value)d characters (it has "
 "%(show_value)d)."
-msgstr[0] "Переконайтесь що це значення має щонайменш %(limit_value)d символ (зараз %(show_value)d)."
-msgstr[1] "Переконайтесь що це значення має щонайменш %(limit_value)d символів (зараз %(show_value)d)."
+msgstr[0] ""
+"Переконайтесь що це значення має щонайменш %(limit_value)d символ (зараз "
+"%(show_value)d)."
+msgstr[1] ""
+"Переконайтесь що це значення має щонайменш %(limit_value)d символів (зараз "
+"%(show_value)d)."
 
 #: env/lib/python3.9/site-packages/django/core/validators.py:413
 #, python-format
@@ -204,11 +3328,6 @@ msgstr ""
 
 #: env/lib/python3.9/site-packages/django/core/validators.py:559
 msgid "Null characters are not allowed."
-msgstr ""
-
-#: env/lib/python3.9/site-packages/django/db/models/base.py:1197
-#: env/lib/python3.9/site-packages/django/forms/models.py:768
-msgid "and"
 msgstr ""
 
 #: env/lib/python3.9/site-packages/django/db/models/base.py:1199
@@ -275,7 +3394,9 @@ msgstr "Розділені комами цілі числа"
 msgid ""
 "“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
 "format."
-msgstr "“%(value)s” має неправильний формат дати. Воно повинно бути в форматі РРРР-ММ-ДД."
+msgstr ""
+"“%(value)s” має неправильний формат дати. Воно повинно бути в форматі РРРР-"
+"ММ-ДД."
 
 #: env/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1147
 #: env/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1290
@@ -283,7 +3404,8 @@ msgstr "“%(value)s” має неправильний формат дати. �
 msgid ""
 "“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
 "date."
-msgstr "“%(value)s” має правильний формат (РРРР-ММ-ДД), але така дата неправильна."
+msgstr ""
+"“%(value)s” має правильний формат (РРРР-ММ-ДД), але така дата неправильна."
 
 #: env/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1150
 msgid "Date (without time)"
@@ -418,10 +3540,6 @@ msgstr ""
 msgid "Time"
 msgstr "Час"
 
-#: env/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2312
-msgid "URL"
-msgstr "URL"
-
 #: env/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2334
 msgid "Raw binary data"
 msgstr "Необроблені бінарні дані"
@@ -448,6 +3566,7 @@ msgid "A JSON object"
 msgstr "Об'єкт JSON"
 
 #: env/lib/python3.9/site-packages/django/db/models/fields/json.py:20
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1764
 msgid "Value must be valid JSON."
 msgstr "Значення повинно бути правильним JSON."
 
@@ -485,6 +3604,11 @@ msgid ":?.!"
 msgstr ""
 
 #: env/lib/python3.9/site-packages/django/forms/fields.py:54
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:316
+#: env/lib/python3.9/site-packages/rest_framework/relations.py:245
+#: env/lib/python3.9/site-packages/rest_framework/relations.py:281
+#: env/lib/python3.9/site-packages/rest_framework/validators.py:90
+#: env/lib/python3.9/site-packages/rest_framework/validators.py:183
 msgid "This field is required."
 msgstr "Це поле обов'язкове."
 
@@ -520,10 +3644,12 @@ msgid "No file was submitted. Check the encoding type on the form."
 msgstr ""
 
 #: env/lib/python3.9/site-packages/django/forms/fields.py:550
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1523
 msgid "No file was submitted."
 msgstr ""
 
 #: env/lib/python3.9/site-packages/django/forms/fields.py:551
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1526
 msgid "The submitted file is empty."
 msgstr ""
 
@@ -540,6 +3666,7 @@ msgid "Please either submit a file or check the clear checkbox, not both."
 msgstr ""
 
 #: env/lib/python3.9/site-packages/django/forms/fields.py:617
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1575
 msgid ""
 "Upload a valid image. The file you uploaded was either not an image or a "
 "corrupted image."
@@ -606,10 +3733,6 @@ msgstr[1] ""
 msgid "Order"
 msgstr "Сортувати"
 
-#: env/lib/python3.9/site-packages/django/forms/formsets.py:417
-msgid "Delete"
-msgstr "Видалити"
-
 #: env/lib/python3.9/site-packages/django/forms/models.py:763
 #, python-format
 msgid "Please correct the duplicate data for %(field)s."
@@ -657,22 +3780,6 @@ msgstr ""
 
 #: env/lib/python3.9/site-packages/django/forms/widgets.py:404
 msgid "Currently"
-msgstr ""
-
-#: env/lib/python3.9/site-packages/django/forms/widgets.py:405
-msgid "Change"
-msgstr ""
-
-#: env/lib/python3.9/site-packages/django/forms/widgets.py:714
-msgid "Unknown"
-msgstr ""
-
-#: env/lib/python3.9/site-packages/django/forms/widgets.py:715
-msgid "Yes"
-msgstr ""
-
-#: env/lib/python3.9/site-packages/django/forms/widgets.py:716
-msgid "No"
 msgstr ""
 
 #. Translators: Please do not add spaces around commas.
@@ -1237,3 +4344,661 @@ msgstr ""
 #: env/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:249
 msgid "Connect, get help, or contribute"
 msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/authentication.py:70
+msgid "Invalid basic header. No credentials provided."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/authentication.py:73
+msgid "Invalid basic header. Credentials string should not contain spaces."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/authentication.py:83
+msgid "Invalid basic header. Credentials not correctly base64 encoded."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/authentication.py:101
+msgid "Invalid username/password."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/authentication.py:104
+#: env/lib/python3.9/site-packages/rest_framework/authentication.py:206
+msgid "User inactive or deleted."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/authentication.py:184
+msgid "Invalid token header. No credentials provided."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/authentication.py:187
+msgid "Invalid token header. Token string should not contain spaces."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/authentication.py:193
+msgid ""
+"Invalid token header. Token string should not contain invalid characters."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/authentication.py:203
+#, fuzzy
+#| msgid "Enter a valid time."
+msgid "Invalid token."
+msgstr "Введіть правильний час."
+
+#: env/lib/python3.9/site-packages/rest_framework/authtoken/apps.py:7
+msgid "Auth Token"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/authtoken/models.py:13
+msgid "Key"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/authtoken/models.py:18
+msgid "Created"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/authtoken/models.py:27
+#: env/lib/python3.9/site-packages/rest_framework/authtoken/serializers.py:19
+msgid "Token"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/authtoken/models.py:28
+msgid "Tokens"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/authtoken/serializers.py:9
+msgid "Username"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/exceptions.py:102
+msgid "A server error occurred."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/exceptions.py:142
+#, fuzzy
+#| msgid "Enter a valid integer."
+msgid "Invalid input."
+msgstr "Введіть коректне число."
+
+#: env/lib/python3.9/site-packages/rest_framework/exceptions.py:163
+msgid "Malformed request."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/exceptions.py:169
+msgid "Incorrect authentication credentials."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/exceptions.py:175
+msgid "Authentication credentials were not provided."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/exceptions.py:181
+msgid "You do not have permission to perform this action."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/exceptions.py:187
+msgid "Not found."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/exceptions.py:193
+#, python-brace-format
+msgid "Method \"{method}\" not allowed."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/exceptions.py:204
+msgid "Could not satisfy the request Accept header."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/exceptions.py:214
+#, python-brace-format
+msgid "Unsupported media type \"{media_type}\" in request."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/exceptions.py:225
+msgid "Request was throttled."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/exceptions.py:226
+#, python-brace-format
+msgid "Expected available in {wait} second."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/exceptions.py:227
+#, python-brace-format
+msgid "Expected available in {wait} seconds."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:317
+#, fuzzy
+#| msgid "This field cannot be null."
+msgid "This field may not be null."
+msgstr "Це поле не може бути анульованим."
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:701
+#, fuzzy
+#| msgid "Enter a valid value."
+msgid "Must be a valid boolean."
+msgstr "Введіть коректне значення."
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:766
+#, fuzzy
+#| msgid "Enter a valid time."
+msgid "Not a valid string."
+msgstr "Введіть правильний час."
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:767
+#, fuzzy
+#| msgid "This field cannot be blank."
+msgid "This field may not be blank."
+msgstr "Це поле не може бути порожнім."
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:768
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1893
+#, python-brace-format
+msgid "Ensure this field has no more than {max_length} characters."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:769
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "Ensure this value has at least %(limit_value)d character (it has "
+#| "%(show_value)d)."
+#| msgid_plural ""
+#| "Ensure this value has at least %(limit_value)d characters (it has "
+#| "%(show_value)d)."
+msgid "Ensure this field has at least {min_length} characters."
+msgstr ""
+"Переконайтесь що це значення має щонайменш %(limit_value)d символ (зараз "
+"%(show_value)d)."
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:827
+msgid "This value does not match the required pattern."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:838
+#, fuzzy
+#| msgid ""
+#| "Enter a valid “slug” consisting of letters, numbers, underscores or "
+#| "hyphens."
+msgid ""
+"Enter a valid \"slug\" consisting of letters, numbers, underscores or "
+"hyphens."
+msgstr ""
+"Введіть коректний “slug”, що складається з літер, цифр, підкреслень або "
+"дефісів."
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:839
+#, fuzzy
+#| msgid ""
+#| "Enter a valid “slug” consisting of Unicode letters, numbers, underscores, "
+#| "or hyphens."
+msgid ""
+"Enter a valid \"slug\" consisting of Unicode letters, numbers, underscores, "
+"or hyphens."
+msgstr ""
+"Введіть коректний “slug”, що складається з символів юнікоду, цифр, "
+"підкреслень або дефісів."
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:867
+#, fuzzy
+#| msgid "Enter a valid UUID."
+msgid "Must be a valid UUID."
+msgstr "Введіть правильний UUID."
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:931
+#, fuzzy
+#| msgid "This field is required."
+msgid "A valid integer is required."
+msgstr "Це поле обов'язкове."
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:932
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:969
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1005
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1375
+#, fuzzy, python-brace-format
+#| msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgid "Ensure this value is less than or equal to {max_value}."
+msgstr "Переконайтесь що це значення менше або дорівнює %(limit_value)s."
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:933
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:970
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1006
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1376
+#, fuzzy, python-brace-format
+#| msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgid "Ensure this value is greater than or equal to {min_value}."
+msgstr "Переконайтесь що це значення більше або дорівнює %(limit_value)s."
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:934
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:971
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1010
+msgid "String value too large."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:968
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1004
+#, fuzzy
+#| msgid "This field is required."
+msgid "A valid number is required."
+msgstr "Це поле обов'язкове."
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1007
+#, python-brace-format
+msgid "Ensure that there are no more than {max_digits} digits in total."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1008
+#, python-brace-format
+msgid "Ensure that there are no more than {max_decimal_places} decimal places."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1009
+#, python-brace-format
+msgid ""
+"Ensure that there are no more than {max_whole_digits} digits before the "
+"decimal point."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1157
+#, python-brace-format
+msgid "Datetime has wrong format. Use one of these formats instead: {format}."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1158
+msgid "Expected a datetime but got a date."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1159
+#, python-brace-format
+msgid "Invalid datetime for the timezone \"{timezone}\"."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1160
+msgid "Datetime value out of range."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1245
+#, python-brace-format
+msgid "Date has wrong format. Use one of these formats instead: {format}."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1246
+msgid "Expected a date but got a datetime."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1312
+#, python-brace-format
+msgid "Time has wrong format. Use one of these formats instead: {format}."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1374
+#, python-brace-format
+msgid "Duration has wrong format. Use one of these formats instead: {format}."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1408
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1465
+#, python-brace-format
+msgid "\"{input}\" is not a valid choice."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1411
+#, python-brace-format
+msgid "More than {count} items..."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1466
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1612
+#: env/lib/python3.9/site-packages/rest_framework/relations.py:487
+#: env/lib/python3.9/site-packages/rest_framework/serializers.py:570
+#, python-brace-format
+msgid "Expected a list of items but got type \"{input_type}\"."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1467
+msgid "This selection may not be empty."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1504
+#, python-brace-format
+msgid "\"{input}\" is not a valid path choice."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1524
+msgid "The submitted data was not a file. Check the encoding type on the form."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1525
+msgid "No filename could be determined."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1527
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "Ensure this value has at least %(limit_value)d character (it has "
+#| "%(show_value)d)."
+#| msgid_plural ""
+#| "Ensure this value has at least %(limit_value)d characters (it has "
+#| "%(show_value)d)."
+msgid ""
+"Ensure this filename has at most {max_length} characters (it has {length})."
+msgstr ""
+"Переконайтесь що це значення має щонайменш %(limit_value)d символ (зараз "
+"%(show_value)d)."
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1613
+#: env/lib/python3.9/site-packages/rest_framework/relations.py:488
+#: env/lib/python3.9/site-packages/rest_framework/serializers.py:571
+#, fuzzy
+#| msgid "This field cannot be null."
+msgid "This list may not be empty."
+msgstr "Це поле не може бути анульованим."
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1614
+#, python-brace-format
+msgid "Ensure this field has at least {min_length} elements."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1615
+#, python-brace-format
+msgid "Ensure this field has no more than {max_length} elements."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1691
+#, python-brace-format
+msgid "Expected a dictionary of items but got type \"{input_type}\"."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/fields.py:1692
+msgid "This dictionary may not be empty."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/filters.py:50
+msgid "A search term."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/filters.py:180
+#: env/lib/python3.9/site-packages/rest_framework/templates/rest_framework/filters/ordering.html:3
+#, fuzzy
+#| msgid "Order"
+msgid "Ordering"
+msgstr "Сортувати"
+
+#: env/lib/python3.9/site-packages/rest_framework/filters.py:181
+msgid "Which field to use when ordering the results."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/filters.py:297
+msgid "ascending"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/filters.py:298
+msgid "descending"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/pagination.py:174
+msgid "A page number within the paginated result set."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/pagination.py:179
+#: env/lib/python3.9/site-packages/rest_framework/pagination.py:376
+#: env/lib/python3.9/site-packages/rest_framework/pagination.py:594
+msgid "Number of results to return per page."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/pagination.py:189
+#, fuzzy
+#| msgid "Enter a valid date."
+msgid "Invalid page."
+msgstr "Введіть правильну дату."
+
+#: env/lib/python3.9/site-packages/rest_framework/pagination.py:378
+msgid "The initial index from which to return the results."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/pagination.py:585
+msgid "The pagination cursor value."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/pagination.py:587
+msgid "Invalid cursor"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/relations.py:246
+#, python-brace-format
+msgid "Invalid pk \"{pk_value}\" - object does not exist."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/relations.py:247
+#, python-brace-format
+msgid "Incorrect type. Expected pk value, received {data_type}."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/relations.py:282
+msgid "Invalid hyperlink - No URL match."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/relations.py:283
+msgid "Invalid hyperlink - Incorrect URL match."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/relations.py:284
+msgid "Invalid hyperlink - Object does not exist."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/relations.py:285
+#, python-brace-format
+msgid "Incorrect type. Expected URL string, received {data_type}."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/relations.py:450
+#, python-brace-format
+msgid "Object with {slug_name}={value} does not exist."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/relations.py:451
+#, fuzzy
+#| msgid "Enter a valid value."
+msgid "Invalid value."
+msgstr "Введіть коректне значення."
+
+#: env/lib/python3.9/site-packages/rest_framework/schemas/utils.py:32
+msgid "unique integer value"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/schemas/utils.py:34
+msgid "UUID string"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/schemas/utils.py:36
+msgid "unique value"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/schemas/utils.py:38
+#, python-brace-format
+msgid "A {value_type} identifying this {name}."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/serializers.py:337
+#, python-brace-format
+msgid "Invalid data. Expected a dictionary, but got {datatype}."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/templates/rest_framework/admin.html:116
+#: env/lib/python3.9/site-packages/rest_framework/templates/rest_framework/base.html:136
+msgid "Extra Actions"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/templates/rest_framework/base.html:37
+msgid "navbar"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/templates/rest_framework/base.html:78
+msgid "request form"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/templates/rest_framework/base.html:157
+msgid "main content"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/templates/rest_framework/base.html:173
+msgid "request info"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/templates/rest_framework/base.html:177
+msgid "response info"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/templates/rest_framework/horizontal/select_multiple.html:4
+#: env/lib/python3.9/site-packages/rest_framework/templates/rest_framework/inline/select_multiple.html:3
+#: env/lib/python3.9/site-packages/rest_framework/templates/rest_framework/vertical/select_multiple.html:3
+msgid "No items to select."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/validators.py:39
+#, fuzzy
+#| msgid "This field is required."
+msgid "This field must be unique."
+msgstr "Це поле обов'язкове."
+
+#: env/lib/python3.9/site-packages/rest_framework/validators.py:89
+#, python-brace-format
+msgid "The fields {field_names} must make a unique set."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/validators.py:171
+#, python-brace-format
+msgid "Surrogate characters are not allowed: U+{code_point:X}."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/validators.py:243
+#, python-brace-format
+msgid "This field must be unique for the \"{date_field}\" date."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/validators.py:258
+#, python-brace-format
+msgid "This field must be unique for the \"{date_field}\" month."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/validators.py:271
+#, python-brace-format
+msgid "This field must be unique for the \"{date_field}\" year."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/versioning.py:40
+msgid "Invalid version in \"Accept\" header."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/versioning.py:71
+msgid "Invalid version in URL path."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/versioning.py:116
+msgid "Invalid version in URL path. Does not match any version namespace."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/versioning.py:148
+msgid "Invalid version in hostname."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework/versioning.py:170
+msgid "Invalid version in query parameter."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/authentication.py:80
+msgid "Authorization header must contain two space-delimited values"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/authentication.py:101
+msgid "Given token not valid for any token type"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/authentication.py:112
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/authentication.py:134
+msgid "Token contained no recognizable user identification"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/authentication.py:117
+msgid "User not found"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/authentication.py:120
+msgid "User is inactive"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/backends.py:50
+msgid "Unrecognized algorithm type '{}'"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/backends.py:53
+msgid "You must have cryptography installed to use {}."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/backends.py:104
+msgid "Invalid algorithm specified"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/backends.py:106
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/exceptions.py:38
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/tokens.py:45
+msgid "Token is invalid or expired"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/serializers.py:28
+msgid "No active account found with the given credentials"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/settings.py:65
+msgid ""
+"The '{}' setting has been removed. Please refer to '{}' for available "
+"settings."
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/token_blacklist/admin.py:72
+msgid "jti"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/token_blacklist/admin.py:82
+msgid "created at"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/token_blacklist/admin.py:87
+msgid "expires at"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/token_blacklist/apps.py:7
+msgid "Token Blacklist"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/tokens.py:31
+msgid "Cannot create token with no type or lifetime"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/tokens.py:97
+msgid "Token has no id"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/tokens.py:108
+msgid "Token has no type"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/tokens.py:111
+msgid "Token has wrong type"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/tokens.py:148
+msgid "Token has no '{}' claim"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/tokens.py:152
+msgid "Token '{}' claim has expired"
+msgstr ""
+
+#: env/lib/python3.9/site-packages/rest_framework_simplejwt/tokens.py:200
+msgid "Token is blacklisted"
+msgstr ""
+
+#: syncnote/settings.py:120
+msgid "English-American"
+msgstr "Англійська-Американська"
