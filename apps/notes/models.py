@@ -53,6 +53,8 @@ class Note(UUIDModel):
         verbose_name=_('tags')
     )
 
+    updated_at = models.DateTimeField(auto_now=True)
+
     class Meta:
         verbose_name = _("Note")
         verbose_name_plural = _("Notes")
