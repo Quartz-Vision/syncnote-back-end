@@ -61,4 +61,3 @@ class Note(UUIDModel):
 
     def __str__(self):
         return f'"{self.title}" of {self.user}'
-
