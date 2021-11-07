@@ -7,6 +7,7 @@ from apps.common.models import UUIDModel
 
 class User(AbstractUser, UUIDModel):
     used_data_size = models.IntegerField(
+        default=0,
         verbose_name=_('used data size')
     )
     max_data_size = models.IntegerField(
