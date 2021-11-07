@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-07 11:59+0000\n"
+"POT-Creation-Date: 2021-11-07 12:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,15 +57,19 @@ msgstr "Нотатка"
 msgid "Notes"
 msgstr "Нотатки"
 
-#: apps/user/models.py:10
+#: apps/user/models.py:11
+msgid "email"
+msgstr "e-mail"
+
+#: apps/user/models.py:16
 msgid "used data size"
 msgstr "використана кількість даних"
 
-#: apps/user/models.py:14
+#: apps/user/models.py:20
 msgid "allowed data size"
 msgstr "дозволена кількість даних"
 
-#: apps/user/models.py:19
+#: apps/user/models.py:25
 msgid "language"
 msgstr "мова"
 
