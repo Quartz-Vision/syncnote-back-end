@@ -8,6 +8,8 @@ from apps.common.models import UUIDModel
 class User(AbstractUser, UUIDModel):
     email = models.EmailField(
         unique=True,
+        null=True,
+        blank=True,
         verbose_name=_('email')
     )
 
