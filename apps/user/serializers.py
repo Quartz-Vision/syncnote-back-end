@@ -6,7 +6,6 @@ from dj_rest_auth.serializers import (
     PasswordResetConfirmSerializer
 )
 from rest_framework import serializers
-from rest_framework_simplejwt.serializers import TokenObtainPairSerializer, PasswordField
 
 from apps.common.utils import send_mail_to
 
@@ -20,7 +19,7 @@ class UserRetrieveSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = (
-            'id', 'email', 'username'
+            'id', 'email', 'username', 'used_data_size', 'max_data_size', 'lang'
         )
 
 
@@ -41,31 +40,24 @@ class UserCreateSerializer(serializers.ModelSerializer):
             'email': {'required': False},
         }
 
-    # def send_registration_greeting(self, user, password):
-    #     send_mail_to(
-    #         "Välkommen till Zammans!",
-    #         user.email,
-    #         'registration_greeting.html',
-    #         {
-    #             'user': user,
-    #             'password': password
-    #         }
-    #     )
-    #
-    # def validate(self, data):
-    #     password = data.get('password')
-    #     if password:
-    #         validators.validate_password(password=password, user=User)
-    #
-    #     return super(UserCreateSerializer, self).validate(data)
-
     def create(self, validated_data):
         """
         Creates new user with an e-mail and a password, then calls 'update' to add another fields
         """
         password = validated_data.pop('password', '')
-        user = User(email=validated_data.pop('email', ''), username=validated_data.pop('username', ''))
+        user = User(
+            email=validated_data.pop('email', None),
+            username=validated_data.pop('username', ''),
+        )
         user.set_password(password)
+        
+        lang = validated_data.pop(
+            'lang',
+            getattr(self.context.get('request', None), 'LANGUAGE_CODE',  None)
+        )
+        if lang is not None:
+            user.lang = lang
+
         user.save()
 
         # self.send_registration_greeting(user, password)
@@ -120,36 +112,9 @@ class UserUpdateSerializer(serializers.ModelSerializer):
         return super(UserUpdateSerializer, self).update(instance, validated_data)
 
 
-# class CustomPasswordField(PasswordField):
-#     def __init__(self, *args, **kwargs):
-#         # kwargs['trim_whitespace'] = False
-#         super(CustomPasswordField, self).__init__(*args, **kwargs)
-#
-#
-# class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
-#     def __init__(self, *args, **kwargs):
-#         super(CustomTokenObtainPairSerializer, self).__init__(*args, **kwargs)
-#         self.fields['password'] = CustomPasswordField()
-
-
 class CustomPasswordResetConfirmSerializer(PasswordResetConfirmSerializer):
     new_password1 = serializers.CharField(max_length=128, trim_whitespace=False)
     new_password2 = serializers.CharField(max_length=128, trim_whitespace=False)
-
-    def custom_validation(self, data):
-        # errors = dict()
-        # for field_name in ('new_password1', 'new_password2'):
-        #     password = data.get(field_name)
-        #
-        #     if password:
-        #         try:
-        #             validators.validate_password(password=password, user=self.user)
-        #         except exceptions.ValidationError as e:
-        #             errors[field_name] = list(e.messages)
-        # if errors:
-        #     raise serializers.ValidationError(errors)
-
-        return super(CustomPasswordResetConfirmSerializer, self).custom_validation(data)
 
 
 class CustomPasswordResetSerializer(PasswordResetSerializer):
