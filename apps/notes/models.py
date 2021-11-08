@@ -43,6 +43,12 @@ class Note(UUIDModel):
         default="#ffffff",
         verbose_name=_('color')
     )
+    icon = models.CharField(
+        max_length=50,
+        null=True,
+        blank=True,
+        verbose_name=_('icon name')
+    )
     data_size = models.IntegerField(
         default=0,
         verbose_name=_('data size')

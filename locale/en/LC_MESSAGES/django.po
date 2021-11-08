@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-07 12:07+0000\n"
+"POT-Creation-Date: 2021-11-08 10:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,35 +38,39 @@ msgstr ""
 msgid "color"
 msgstr ""
 
-#: apps/notes/models.py:48
+#: apps/notes/models.py:50
+msgid "icon name"
+msgstr ""
+
+#: apps/notes/models.py:54
 msgid "data size"
 msgstr ""
 
-#: apps/notes/models.py:53
+#: apps/notes/models.py:59
 msgid "tags"
 msgstr ""
 
-#: apps/notes/models.py:59
+#: apps/notes/models.py:65
 msgid "Note"
 msgstr ""
 
-#: apps/notes/models.py:60
+#: apps/notes/models.py:66
 msgid "Notes"
 msgstr ""
 
-#: apps/user/models.py:11
+#: apps/user/models.py:13
 msgid "email"
 msgstr ""
 
-#: apps/user/models.py:16
+#: apps/user/models.py:18
 msgid "used data size"
 msgstr ""
 
-#: apps/user/models.py:20
+#: apps/user/models.py:22
 msgid "allowed data size"
 msgstr ""
 
-#: apps/user/models.py:25
+#: apps/user/models.py:27
 msgid "language"
 msgstr ""
 
