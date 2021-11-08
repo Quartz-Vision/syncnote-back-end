@@ -37,7 +37,7 @@ def get_notes_update_diff(notes: QuerySet, checklist: list[dict]) -> dict:
         db_id = str(note.id)
         if db_id not in checklist_ids or checklist_update_time[db_id] < note.updated_at:
             notes_updated.append(NoteSerializer(instance=note).data)
-            
+
         elif checklist_update_time[db_id] > note.updated_at:
             notes_to_send.add(db_id)
 
