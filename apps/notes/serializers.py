@@ -1,4 +1,5 @@
 from django.db import transaction
+from django.http import request
 from rest_framework import serializers
 
 from apps.notes.models import Note, Tag
@@ -11,6 +12,7 @@ class TagSerializer(serializers.ModelSerializer):
 
 
 class TagListField(serializers.ListField):
+    """Need this field to return just plain list of strings"""
     child = serializers.CharField()
 
     def to_representation(self, data):
@@ -18,9 +20,12 @@ class TagListField(serializers.ListField):
 
 
 class NoteSerializer(serializers.ModelSerializer):
+    local_id = serializers.CharField(required=False)  # need it to receive notes' updates
+
     tags = TagListField(
         allow_empty=True,
-        allow_null=True
+        allow_null=True,
+        required=False
     )
 
     def to_representation(self, instance):
@@ -47,6 +52,8 @@ class NoteSerializer(serializers.ModelSerializer):
         data_size = len(validated_data.get('content'))
         user = getattr(self.context.get('request'), 'user')
 
+        validated_data.pop('local_id', None)
+
         with transaction.atomic():
             instance = Note.objects.create(
                 user=user,
@@ -62,6 +69,8 @@ class NoteSerializer(serializers.ModelSerializer):
         content = validated_data.get('content')
         data_size = len(content or '')
         user = getattr(self.context.get('request'), 'user')
+
+        validated_data.pop('local_id', None)
         
         with transaction.atomic():
             instance = super(NoteSerializer, self).update(
@@ -73,3 +82,18 @@ class NoteSerializer(serializers.ModelSerializer):
             self.set_tags(instance, tags)
 
         return instance
+
+    
+class NotesUpdateRequestSerializer(serializers.Serializer):
+    id = serializers.CharField()
+    updated_at = serializers.DateTimeField()
+
+
+class NotesUpdateResponseSerializer(serializers.Serializer):
+    notes_updated = NoteSerializer(many=True)
+    notes_to_send = serializers.ListField(child=serializers.CharField())
+
+
+class NotesUploadResponseSerializer(serializers.Serializer):
+    local_id = serializers.CharField()
+    remote_id = serializers.CharField()

@@ -1,6 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from django.utils import timezone
 
 from apps.common.models import UUIDModel
 
@@ -36,11 +37,13 @@ class Note(UUIDModel):
     )
     content = models.TextField(
         max_length=524288,
+        blank=True,
         verbose_name=_('content')
     )
     color = models.CharField(
         max_length=7,
-        default="#ffffff",
+        blank=True,
+        null=True,
         verbose_name=_('color')
     )
     icon = models.CharField(
@@ -59,7 +62,11 @@ class Note(UUIDModel):
         verbose_name=_('tags')
     )
 
-    updated_at = models.DateTimeField(auto_now=True)
+    updated_at = models.DateTimeField(
+        default=timezone.now,
+        blank=True,
+        verbose_name=_('update time')
+    )
 
     class Meta:
         verbose_name = _("Note")

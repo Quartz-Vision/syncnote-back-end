@@ -4,7 +4,7 @@ from apps.notes.views import NotesViewSet
 
 app_name = 'notes'
 
-root_router = routers.SimpleRouter(trailing_slash=False)
+root_router = routers.SimpleRouter()
 root_router.register('', NotesViewSet, basename='notes')
 
 urlpatterns = []
