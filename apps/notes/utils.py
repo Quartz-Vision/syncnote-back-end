@@ -47,21 +47,21 @@ def get_notes_update_diff(notes: QuerySet, checklist: list[dict]) -> dict:
     }
 
 
-def update_notes(notes: QuerySet, updated_notes: list[dict], context: dict) -> list[dict]:
+def update_notes(notes: QuerySet, updates: list[dict], context: dict) -> list[dict]:
     serializer = NoteSerializer(context=context)
     local_remote_ids = []
 
-    for updated in updated_notes:
-        local_id = updated['local_id']
+    for update in updates:
+        local_id = update['local_id']
         try:
             note = notes.filter(id=UUID(local_id)).first()
         except ValueError:
             note = None
 
         if note:
-            serializer.update(note, updated)
+            serializer.update(note, update)
         else:
-            db_id = str(serializer.create(updated).id)
+            db_id = str(serializer.create(update).id)
             local_remote_ids.append({
                 'local_id': local_id,
                 'remote_id': db_id
