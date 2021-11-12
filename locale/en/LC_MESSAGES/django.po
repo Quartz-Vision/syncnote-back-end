@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-08 10:08+0000\n"
+"POT-Creation-Date: 2021-11-12 20:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,44 +18,52 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: apps/notes/models.py:15 apps/notes/models.py:31
+#: apps/notes/models.py:16 apps/notes/models.py:32
 msgid "user"
 msgstr ""
 
-#: apps/notes/models.py:19
+#: apps/notes/models.py:20
 msgid "text"
 msgstr ""
 
-#: apps/notes/models.py:35
+#: apps/notes/models.py:36
 msgid "title"
 msgstr ""
 
-#: apps/notes/models.py:39
+#: apps/notes/models.py:41
 msgid "content"
 msgstr ""
 
-#: apps/notes/models.py:44
+#: apps/notes/models.py:47
 msgid "color"
 msgstr ""
 
-#: apps/notes/models.py:50
+#: apps/notes/models.py:53
 msgid "icon name"
 msgstr ""
 
-#: apps/notes/models.py:54
+#: apps/notes/models.py:57
 msgid "data size"
 msgstr ""
 
-#: apps/notes/models.py:59
+#: apps/notes/models.py:62
 msgid "tags"
 msgstr ""
 
-#: apps/notes/models.py:65
+#: apps/notes/models.py:68
+msgid "update time"
+msgstr ""
+
+#: apps/notes/models.py:72
 msgid "Note"
 msgstr ""
 
-#: apps/notes/models.py:66
+#: apps/notes/models.py:73
 msgid "Notes"
+msgstr ""
+
+#: apps/notes/signals.py:18
+msgid "The user has exceeded data size limit"
 msgstr ""
 
 #: apps/user/models.py:13
@@ -73,6 +81,12 @@ msgstr ""
 #: apps/user/models.py:27
 msgid "language"
 msgstr ""
+
+#: apps/user/serializers.py:107
+#, fuzzy
+#| msgid "New password|field name"
+msgid "Wrong old password"
+msgstr "New password"
 
 #: apps/user/templates/user/password_reset_confirm.html:22
 msgid "Reset your Syncnote account password"
@@ -242,11 +256,6 @@ msgstr ""
 #~| msgid "Password confirmation|field name"
 #~ msgid "New password confirmation"
 #~ msgstr "Password confirmation"
-
-#, fuzzy
-#~| msgid "New password|field name"
-#~ msgid "Old password"
-#~ msgstr "New password"
 
 #, fuzzy
 #~| msgid "Password confirmation|field name"

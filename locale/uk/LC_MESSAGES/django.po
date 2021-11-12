@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-08 10:08+0000\n"
+"POT-Creation-Date: 2021-11-12 20:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,45 +21,53 @@ msgstr ""
 "100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
 "(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
-#: apps/notes/models.py:15 apps/notes/models.py:31
+#: apps/notes/models.py:16 apps/notes/models.py:32
 msgid "user"
 msgstr "користувач"
 
-#: apps/notes/models.py:19
+#: apps/notes/models.py:20
 msgid "text"
 msgstr "текст"
 
-#: apps/notes/models.py:35
+#: apps/notes/models.py:36
 msgid "title"
 msgstr "заголовок"
 
-#: apps/notes/models.py:39
+#: apps/notes/models.py:41
 msgid "content"
 msgstr "вміст"
 
-#: apps/notes/models.py:44
+#: apps/notes/models.py:47
 msgid "color"
 msgstr "колір"
 
-#: apps/notes/models.py:50
+#: apps/notes/models.py:53
 msgid "icon name"
 msgstr "назва значка"
 
-#: apps/notes/models.py:54
+#: apps/notes/models.py:57
 msgid "data size"
 msgstr "кількість даних"
 
-#: apps/notes/models.py:59
+#: apps/notes/models.py:62
 msgid "tags"
 msgstr "теги"
 
-#: apps/notes/models.py:65
+#: apps/notes/models.py:68
+msgid "update time"
+msgstr "час оновлення"
+
+#: apps/notes/models.py:72
 msgid "Note"
 msgstr "Нотатка"
 
-#: apps/notes/models.py:66
+#: apps/notes/models.py:73
 msgid "Notes"
 msgstr "Нотатки"
+
+#: apps/notes/signals.py:18
+msgid "The user has exceeded data size limit"
+msgstr "Користувач перевищив ліміт зберігання даних"
 
 #: apps/user/models.py:13
 msgid "email"
@@ -76,6 +84,10 @@ msgstr "дозволена кількість даних"
 #: apps/user/models.py:27
 msgid "language"
 msgstr "мова"
+
+#: apps/user/serializers.py:107
+msgid "Wrong old password"
+msgstr "Неправильний старий пароль"
 
 #: apps/user/templates/user/password_reset_confirm.html:22
 msgid "Reset your Syncnote account password"

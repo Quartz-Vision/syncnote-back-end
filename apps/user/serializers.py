@@ -1,6 +1,6 @@
 import django.contrib.auth.password_validation as validators
 from django.contrib.auth import get_user_model
-from django.core import exceptions
+from django.utils.translation import ugettext_lazy as _
 from dj_rest_auth.serializers import (
     PasswordResetSerializer,
     PasswordResetConfirmSerializer
@@ -82,7 +82,7 @@ class UserUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = (
-            'id', 'email', 'new_password', 'old_password', 'username'
+            'id', 'email', 'new_password', 'old_password', 'username', 'lang'
         )
         extra_kwargs = {
             'username': {'required': False},
@@ -104,7 +104,7 @@ class UserUpdateSerializer(serializers.ModelSerializer):
         old_password = validated_data.pop('old_password', None)
         if new_password:
             if not instance.check_password(old_password):
-                raise serializers.ValidationError("wrong old password")
+                raise serializers.ValidationError(_("Wrong old password"))
 
             instance.set_password(new_password)
             instance.save()
