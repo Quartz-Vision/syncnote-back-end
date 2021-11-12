@@ -18,7 +18,7 @@ class User(AbstractUser, UUIDModel):
         verbose_name=_('used data size')
     )
     max_data_size = models.IntegerField(
-        default=1048576,
+        default=1048576,  # 1 MB
         verbose_name=_('allowed data size')
     )
     lang = models.CharField(
