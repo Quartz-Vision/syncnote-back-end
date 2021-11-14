@@ -16,7 +16,7 @@ from apps.notes.serializers import (
 from apps.notes.utils import filter_valid_uuids, get_notes_update_diff, update_notes
 
 
-class NotesViewSet(viewsets.GenericViewSet):
+class NotesViewSet(viewsets.GenericViewSet, mixins.DestroyModelMixin):
     """
     User update view - for the currently logged in user
     """
