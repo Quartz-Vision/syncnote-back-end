@@ -104,7 +104,7 @@ class UserUpdateSerializer(serializers.ModelSerializer):
         old_password = validated_data.pop('old_password', None)
         if new_password:
             if not instance.check_password(old_password):
-                raise serializers.ValidationError(_("Wrong old password"))
+                raise serializers.ValidationError({"old_password": _("Wrong old password")})
 
             instance.set_password(new_password)
             instance.save()
