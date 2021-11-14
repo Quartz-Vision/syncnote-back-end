@@ -100,7 +100,7 @@ class UserUpdateSerializer(serializers.ModelSerializer):
         """
         If there is a password changing - check if the old one is correct
         """
-        new_password = validated_data.pop('password', None)
+        new_password = validated_data.pop('new_password', None)
         old_password = validated_data.pop('old_password', None)
         if new_password:
             if not instance.check_password(old_password):
