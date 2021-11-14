@@ -1,4 +1,4 @@
-from django.db.models.signals import pre_save
+from django.db.models.signals import pre_save, pre_delete
 from django.dispatch import receiver
 from django.utils.translation import ugettext_lazy as _
 from rest_framework.exceptions import ValidationError
@@ -15,8 +15,16 @@ def update_data_sizes(sender, instance, **kwargs):
 
     if (user.used_data_size + delta_size) > user.max_data_size:
         raise ValidationError({
-            "data_size": _("The user has exceeded data size limit")
+            "data_size": [_("The user has exceeded data size limit")]
         })
 
     user.used_data_size += delta_size
+    user.save()
+
+
+@receiver(pre_delete, sender=Note)
+def delete_data_size(sender, instance, **kwargs):
+    user = instance.user
+    
+    user.used_data_size -= instance.data_size
     user.save()
