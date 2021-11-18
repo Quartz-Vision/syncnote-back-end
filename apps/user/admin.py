@@ -3,28 +3,34 @@ from django.contrib import admin
 from django.contrib.admin.decorators import display
 from django.contrib.auth import get_user_model
 from django.utils.translation import ugettext_lazy as _
+from django.contrib.auth.models import Group
+from rest_framework.authtoken.models import Token
 
 from apps.common.utils import convert_size
 
 User = get_user_model()
 
 
-class UserAdminForm(forms.ModelForm):
-    password = forms.CharField(max_length=128, widget=forms.PasswordInput, required=False)
+admin.site.unregister(Group)
+admin.site.unregister(Token)
 
-    class Meta:
-        model = User
-        fields = '__all__'
 
-    def save(self, commit=True):
-        password = self.data.get('password')
-        ret = super(UserAdminForm, self).save(commit)
+# class UserAdminForm(forms.ModelForm):
+#     password = forms.CharField(max_length=128, widget=forms.PasswordInput, required=False)
 
-        if password:
-            self.instance.set_password(password)
-            self.instance.save()
+#     class Meta:
+#         model = User
+#         fields = '__all__'
 
-        return ret
+#     def save(self, commit=True):
+#         password = self.data.get('password')
+#         ret = super(UserAdminForm, self).save(commit)
+
+#         if password:
+#             self.instance.set_password(password)
+#             self.instance.save()
+
+#         return ret
 
 
 @admin.register(User)
