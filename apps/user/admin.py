@@ -4,7 +4,7 @@ from django.contrib.admin.decorators import display
 from django.contrib.auth import get_user_model
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import Group
-from rest_framework.authtoken.models import Token
+from rest_framework.authtoken.models import TokenProxy
 
 from apps.common.utils import convert_size
 
@@ -12,7 +12,7 @@ User = get_user_model()
 
 
 admin.site.unregister(Group)
-admin.site.unregister(Token)
+admin.site.unregister(TokenProxy)
 
 
 # class UserAdminForm(forms.ModelForm):
