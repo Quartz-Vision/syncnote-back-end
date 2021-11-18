@@ -2,6 +2,8 @@ from django import forms
 from django.contrib import admin
 from django.contrib.auth import get_user_model
 
+from apps.common.utils import convert_size
+
 User = get_user_model()
 
 
@@ -30,3 +32,9 @@ class UserAdmin(admin.ModelAdmin):
     readonly_fields = ('username', 'used_data_size', 'max_data_size')
     list_display = ('username', 'used_data_size', 'max_data_size')
     ordering = ('-used_data_size', 'username')
+
+    def max_data_size(self, obj):
+        return convert_size(obj.max_data_size)
+
+    def used_data_size(self, obj):
+        return convert_size(obj.used_data_size)
