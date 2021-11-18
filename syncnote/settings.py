@@ -124,7 +124,7 @@ LANGUAGES = [
     ('uk', _('Ukrainian')),
 ]
 
-LANGUAGE_CODE = 'uk-ua'
+LANGUAGE_CODE = 'uk-uk'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
