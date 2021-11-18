@@ -31,7 +31,7 @@ class UserAdminForm(forms.ModelForm):
 class UserAdmin(admin.ModelAdmin):
     # form = UserAdminForm
     fields = ('username', 'used_data_size', 'max_data_size')
-    readonly_fields = ('username', 'used_data_size', 'max_data_size')
+    readonly_fields = ('username', 'get_used_data_size', 'get_used_data_size')
     list_display = ('username', 'get_used_data_size', 'get_max_data_size')
     ordering = ('-used_data_size', 'username')
 
