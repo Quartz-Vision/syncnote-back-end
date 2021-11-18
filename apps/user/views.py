@@ -71,7 +71,7 @@ class CurrentUserViewSet(generics.GenericAPIView):
         )
 
     @swagger_auto_schema(
-        operation_description="Get the user that is logged in",
+        operation_description="Update the user that is logged in",
         responses={
             status.HTTP_200_OK: UserRetrieveSerializer()
         },
@@ -90,7 +90,7 @@ class CurrentUserViewSet(generics.GenericAPIView):
         )
 
     @swagger_auto_schema(
-        operation_description="Get the user that is logged in",
+        operation_description="Delete the user that is logged in",
         responses={
             status.HTTP_200_OK: "OK"
         }

@@ -25,4 +25,7 @@ class UserAdminForm(forms.ModelForm):
 
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
-    form = UserAdminForm
+    # form = UserAdminForm
+    fields = ('username', 'used_data_size', 'max_data_size')
+    display_fields = ('username', 'used_data_size', 'max_data_size')
+    ordering = ('username',)
