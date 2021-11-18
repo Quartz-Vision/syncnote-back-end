@@ -31,7 +31,7 @@ class UserAdminForm(forms.ModelForm):
 class UserAdmin(admin.ModelAdmin):
     # form = UserAdminForm
     fields = ('get_username', 'get_used_data_size', 'get_max_data_size')
-    readonly_fields = ('get_username', 'get_used_data_size', 'get_max_data_size')
+    readonly_fields = ('get_username', 'get_used_data_size', 'get_max_data_size', 'get_notes_count', 'get_tags_count')
     list_display = ('get_username', 'get_used_data_size', 'get_max_data_size')
     ordering = ('-used_data_size', 'username')
 
@@ -46,3 +46,11 @@ class UserAdmin(admin.ModelAdmin):
     @display(ordering='username', description=_('username'))
     def get_username(self, obj):
         return obj.username
+
+    @display(description=_('notes count'))
+    def get_notes_count(self, obj):
+        return obj.notes.count()
+
+    @display(description=_('tags count'))
+    def get_tags_count(self, obj):
+        return obj.tags.count()
