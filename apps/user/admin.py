@@ -30,9 +30,9 @@ class UserAdminForm(forms.ModelForm):
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
     # form = UserAdminForm
-    fields = ('username', 'used_data_size', 'max_data_size')
-    readonly_fields = ('username', 'get_used_data_size', 'get_used_data_size')
-    list_display = ('username', 'get_used_data_size', 'get_max_data_size')
+    # fields = ('get_username', 'used_data_size', 'max_data_size')
+    readonly_fields = ('get_username', 'get_used_data_size', 'get_used_data_size')
+    list_display = ('get_username', 'get_used_data_size', 'get_max_data_size')
     ordering = ('-used_data_size', 'username')
 
     @display(ordering='max_data_size', description=_('allowed data size'))
@@ -42,3 +42,7 @@ class UserAdmin(admin.ModelAdmin):
     @display(ordering='used_data_size', description=_('used data size'))
     def get_used_data_size(self, obj):
         return convert_size(obj.used_data_size)
+
+    @display(ordering='username', description=_('username'))
+    def get_username(self, obj):
+        return obj.username
