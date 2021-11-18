@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-12 20:38+0000\n"
+"POT-Creation-Date: 2021-11-18 17:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,16 +66,28 @@ msgstr ""
 msgid "The user has exceeded data size limit"
 msgstr ""
 
-#: apps/user/models.py:13
-msgid "email"
+#: apps/user/admin.py:44 apps/user/models.py:22
+msgid "allowed data size"
 msgstr ""
 
-#: apps/user/models.py:18
+#: apps/user/admin.py:48 apps/user/models.py:18
 msgid "used data size"
 msgstr ""
 
-#: apps/user/models.py:22
-msgid "allowed data size"
+#: apps/user/admin.py:52
+msgid "username"
+msgstr ""
+
+#: apps/user/admin.py:56
+msgid "notes count"
+msgstr ""
+
+#: apps/user/admin.py:60
+msgid "tags count"
+msgstr ""
+
+#: apps/user/models.py:13
+msgid "email"
 msgstr ""
 
 #: apps/user/models.py:27
@@ -88,6 +100,7 @@ msgstr ""
 msgid "Wrong old password"
 msgstr "New password"
 
+#: apps/user/templates/user/password_reset_confirm.html:13
 #: apps/user/templates/user/password_reset_confirm.html:22
 msgid "Reset your Syncnote account password"
 msgstr "Reset your Syncnote account password"
@@ -166,6 +179,7 @@ msgstr ""
 msgid "Syncnote - password reset"
 msgstr ""
 
+#: apps/user/templates/user/password_reset_success.html:12
 #: apps/user/templates/user/password_reset_success.html:21
 msgid "Your password has successfully been changed!"
 msgstr ""
