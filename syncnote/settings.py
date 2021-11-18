@@ -54,7 +54,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.locale.LocaleMiddleware',
-
+    
     'corsheaders.middleware.CorsMiddleware',
     'corsheaders.middleware.CorsPostCsrfMiddleware',
 
@@ -124,7 +124,7 @@ LANGUAGES = [
     ('uk', _('Ukrainian')),
 ]
 
-LANGUAGE_CODE = 'uk-uk'
+LANGUAGE_CODE = 'uk'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
