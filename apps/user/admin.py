@@ -30,7 +30,7 @@ class UserAdminForm(forms.ModelForm):
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
     # form = UserAdminForm
-    fields = ('get_username', 'get_used_data_size', 'get_max_data_size')
+    fields = ('get_username', 'get_used_data_size', 'get_max_data_size', 'get_notes_count', 'get_tags_count')
     readonly_fields = ('get_username', 'get_used_data_size', 'get_max_data_size', 'get_notes_count', 'get_tags_count')
     list_display = ('get_username', 'get_used_data_size', 'get_max_data_size')
     ordering = ('-used_data_size', 'username')
