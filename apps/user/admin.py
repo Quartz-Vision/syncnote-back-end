@@ -29,4 +29,4 @@ class UserAdmin(admin.ModelAdmin):
     fields = ('username', 'used_data_size', 'max_data_size')
     readonly_fields = ('username', 'used_data_size', 'max_data_size')
     list_display = ('username', 'used_data_size', 'max_data_size')
-    ordering = ('username',)
+    ordering = ('used_data_size', 'username')
