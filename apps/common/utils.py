@@ -5,8 +5,12 @@ from django.core.mail import send_mail
 from django.http import HttpResponsePermanentRedirect
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
+from django.contrib.auth import password_validation, get_user_model
 from rest_framework import serializers
 from urllib.parse import urljoin
+
+User = get_user_model()
+
 
 
 class FullUrlFileField(serializers.FileField):
@@ -92,3 +96,15 @@ def convert_size(size_bytes):
    p = math.pow(1024, i)
    s = round(size_bytes / p, 2)
    return f'{s} {size_name[i]}'
+
+
+class PasswordField(serializers.CharField):
+    def __init__(self, validate_password=True, **kwargs):
+        super(PasswordField, self).__init__(**kwargs)
+        self.validate_password = validate_password
+
+    def run_validation(self, data=serializers.empty):
+        value = super(PasswordField, self).run_validation(data)
+        if self.validate_password and (value or not self.allow_blank):
+            password_validation.validate_password(password=value, user=User)
+        return value

@@ -1,4 +1,3 @@
-import django.contrib.auth.password_validation as validators
 from django.contrib.auth import get_user_model
 from django.utils.translation import ugettext_lazy as _
 from dj_rest_auth.serializers import (
@@ -7,7 +6,7 @@ from dj_rest_auth.serializers import (
 )
 from rest_framework import serializers
 
-from apps.common.utils import send_mail_to
+from apps.common.utils import PasswordField, send_mail_to
 
 User = get_user_model()
 
@@ -65,13 +64,14 @@ class UserCreateSerializer(serializers.ModelSerializer):
         return self.update(user, validated_data)
 
 
+
 class UserUpdateSerializer(serializers.ModelSerializer):
     old_password = serializers.CharField(
         max_length=256,
         write_only=True,
         required=False
     )
-    new_password = serializers.CharField(
+    new_password = PasswordField(
         max_length=256,
         write_only=True,
         required=False,
@@ -88,13 +88,6 @@ class UserUpdateSerializer(serializers.ModelSerializer):
             'username': {'required': False},
             'email': {'required': False},
         }
-
-    def validate(self, data):
-        new_password = data.get('new_password')
-        if new_password:
-            validators.validate_password(password=new_password, user=User)
-
-        return super(UserUpdateSerializer, self).validate(data)
 
     def update(self, instance, validated_data):
         """
