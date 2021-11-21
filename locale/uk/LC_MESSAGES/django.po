@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-18 17:46+0000\n"
+"POT-Creation-Date: 2021-11-21 16:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,25 +69,25 @@ msgstr "Нотатки"
 msgid "The user has exceeded data size limit"
 msgstr "Користувач перевищив ліміт зберігання даних"
 
-#: apps/user/admin.py:44 apps/user/models.py:22
+#: apps/user/admin.py:26 apps/user/models.py:22
 msgid "allowed data size"
 msgstr "дозволена кількість даних"
 
-#: apps/user/admin.py:48 apps/user/models.py:18
+#: apps/user/admin.py:30 apps/user/models.py:18
 msgid "used data size"
 msgstr "використана кількість даних"
 
-#: apps/user/admin.py:52
+#: apps/user/admin.py:34
 #, fuzzy
 #| msgid "user"
 msgid "username"
 msgstr "користувач"
 
-#: apps/user/admin.py:56
+#: apps/user/admin.py:38
 msgid "notes count"
 msgstr "кількість нотаток"
 
-#: apps/user/admin.py:60
+#: apps/user/admin.py:42
 msgid "tags count"
 msgstr "кількість тегів"
 
@@ -99,7 +99,7 @@ msgstr "e-mail"
 msgid "language"
 msgstr "мова"
 
-#: apps/user/serializers.py:107
+#: apps/user/serializers.py:100
 msgid "Wrong old password"
 msgstr "Неправильний старий пароль"
 
@@ -185,14 +185,14 @@ msgstr "Syncnote - скидання паролю"
 msgid "Your password has successfully been changed!"
 msgstr "Ваш пароль було успішно змінено!"
 
-#: syncnote/settings.py:121
+#: syncnote/settings.py:122
 msgid "English-American"
 msgstr "Англійська-Американська"
 
-#: syncnote/settings.py:122
+#: syncnote/settings.py:123
 msgid "English"
 msgstr "Англійська"
 
-#: syncnote/settings.py:123
+#: syncnote/settings.py:124
 msgid "Ukrainian"
 msgstr "Українська"
