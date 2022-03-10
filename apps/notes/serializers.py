@@ -28,11 +28,6 @@ class NoteSerializer(serializers.ModelSerializer):
         required=False
     )
 
-    def to_representation(self, instance):
-        data = super(NoteSerializer, self).to_representation(instance)
-        # data['tags'] = [tag.text for tag in instance.tags.all()]
-        return data
-
     class Meta:
         model = Note
         exclude = ('user',)

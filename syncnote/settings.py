@@ -14,6 +14,10 @@ import os
 from pathlib import Path
 from corsheaders.defaults import default_methods, default_headers
 from django.utils.translation import ugettext_lazy as _
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,10 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-q+fvafa23oe#p@i@u+p7=c*9nll+eiq(i$+c-!q@_$82*hf%ca'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
+DEBUG = os.getenv('DEBUG') in ('true', '1', 'True')
 
 # Application definition
 
@@ -91,8 +92,12 @@ WSGI_APPLICATION = 'syncnote.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": os.getenv("DB_NAME"),
+        "USER": os.getenv("DB_USER"),
+        "PASSWORD": os.getenv("DB_PASSWORD"),
+        "HOST": os.getenv("DB_HOST"),
+        "PORT": os.getenv("DB_PORT"),
     }
 }
 
@@ -169,8 +174,8 @@ EMAIL_HOST = os.getenv("EMAIL_HOST")
 EMAIL_PORT = os.getenv("EMAIL_PORT")
 EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
-EMAIL_USE_TLS = (os.getenv("EMAIL_USE_TLS") in ('true', '1'))
-EMAIL_USE_SSL = (os.getenv("EMAIL_USE_SSL") in ('true', '1'))
+EMAIL_USE_TLS = (os.getenv("EMAIL_USE_TLS") in ('true', '1', 'True'))
+EMAIL_USE_SSL = (os.getenv("EMAIL_USE_SSL") in ('true', '1', 'True'))
 
 APP_INBOX_EMAIL = os.getenv("APP_INBOX_EMAIL")
 SERVER_EMAIL = os.getenv("SERVER_EMAIL", APP_INBOX_EMAIL)
@@ -185,13 +190,13 @@ SWAGGER_SETTINGS = {
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_METHODS = default_methods
 CORS_ALLOW_HEADERS = default_headers
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = map(lambda h: h.strip(), os.getenv('ALLOWED_HOSTS', '').split(','))
 
 ROOT_URLCONF = 'syncnote.urls'
 
 BACKEND_DOMAIN = os.getenv('BACKEND_DOMAIN')
 
-REDIRECT_ALLOWED_SCHEMES = ['casamsa']
+REDIRECT_ALLOWED_SCHEMES = ['syncnote']
 
 # static
 STATIC_URL = '/collected_static/'
@@ -201,9 +206,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static/')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 DATA_UPLOAD_MAX_MEMORY_SIZE = None
-
-
-try:
-    from .local_settings import *
-except ImportError:
-    pass
