@@ -35,6 +35,7 @@ DEBUG = os.getenv('DEBUG') in ('true', '1', 'True')
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -206,3 +207,14 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static/')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 DATA_UPLOAD_MAX_MEMORY_SIZE = None
+
+# Channels
+ASGI_APPLICATION = 'syncnote.asgi.application'
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}

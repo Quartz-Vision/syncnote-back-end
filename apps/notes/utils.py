@@ -1,6 +1,6 @@
 from typing import Iterable
 from uuid import UUID
-from django.db.models import QuerySet, Q
+from django.db.models import QuerySet
 
 from apps.notes.serializers import NoteSerializer
 
