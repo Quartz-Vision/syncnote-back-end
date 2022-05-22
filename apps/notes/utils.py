@@ -1,8 +1,16 @@
+from datetime import datetime
 from typing import Iterable
 from uuid import UUID
-from django.db.models import QuerySet
 
+from django.db.models import QuerySet, Subquery, Case, Sum, Max, F, OuterRef
+from django.contrib.auth import get_user_model
+
+from apps.notes.models import Deletion, Note
 from apps.notes.serializers import NoteSerializer
+
+
+User = get_user_model()
+
 
 def create_or_update_notes():
     pass
@@ -68,3 +76,56 @@ def update_notes(notes: QuerySet, updates: list[dict], context: dict) -> list[di
             })
 
     return local_remote_ids
+
+
+def exchange_actions(user: User, updates: list[dict], deletions: list[dict], last_update_time: datetime) -> dict:
+    """
+    Returns updates and sync list in the format of ExchangeActionsResponseSerializer
+    """
+
+    # sync deletions
+    Deletion.objects.bulk_create([
+        Deletion(
+            user=user,
+            note_id=deletion['note_id'],
+            deleted_at=deletion['time']
+        )
+        for deletion in deletions
+    ])
+
+    user.notes.filter(
+        updated_at__lt=Subquery(
+            user.deletions
+            .filter(note_id=OuterRef('id'))
+            .order_by('-deleted_at')
+            .values('deleted_at')[:1]
+        )
+    ).delete()
+
+    # optimize deletions
+    user.deletions.exclude(
+        id=Subquery(
+            user.deletions
+            .filter(note_id=OuterRef('note_id'))
+            .order_by('-deleted_at')
+            .values('id')[:1]
+        )
+    ).delete()
+
+    # gether updates and requests
+
+    # notes = user.notes.all()
+    # notes_updated = update_notes(notes, updates, {'request': None})
+    # notes_to_send = filter_valid_uuids(notes_updated)
+
+    # return {
+    #     'last_update_time': user.last_update_time,
+    #     'updates': [{
+    #         'note_id': note_id,
+    #         'time': user.last_update_time
+    #     } for note_id in notes_to_send],
+    #     'deletions': [{
+    #         'note_id': note_id,
+    #         'time': user.last_update_time
+    #     } for note_id in filter_valid_uuids(deletions)]
+    # }

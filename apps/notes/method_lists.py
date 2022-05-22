@@ -1,7 +1,7 @@
 from django_socket_framework.method_lists import BaseConsumerMethodList
 from django_socket_framework.types import ClientEvent
 
-from apps.notes.type import NotesClientEventType
+from apps.notes.types import NotesClientEventType
 
 
 class NotesMethodList(BaseConsumerMethodList):

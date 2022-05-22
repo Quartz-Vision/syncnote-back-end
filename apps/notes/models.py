@@ -73,4 +73,26 @@ class Note(UUIDModel):
         verbose_name_plural = _("Notes")
 
     def __str__(self):
-        return f'"{self.title}" of {self.user}'
+        return _('"{}" of {}').format(self.title, self.user)
+
+
+class Deletion(UUIDModel):
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='deletions',
+        verbose_name=_('user'),
+    )
+    note_id = models.UUIDField(verbose_name=_('note id'))
+    deleted_at = models.DateTimeField(
+        default=timezone.now,
+        blank=True,
+        verbose_name=_('deletion time')
+    )
+
+    class Meta:
+        verbose_name = _("Deletion")
+        verbose_name_plural = _("Deletions")
+
+    def __str__(self):
+        return _('Note<{}> of {}').format(self.note_id, self.user)

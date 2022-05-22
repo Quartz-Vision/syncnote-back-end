@@ -78,10 +78,20 @@ class NoteSerializer(serializers.ModelSerializer):
 
         return instance
 
+
+class ActionSerializer(serializers.Serializer):
+    note_id = serializers.CharField()
+    time = serializers.DateTimeField()
+
     
-class NotesUpdateRequestSerializer(serializers.Serializer):
-    id = serializers.CharField()
-    updated_at = serializers.DateTimeField()
+class ExchangeActionsSerializer(serializers.Serializer):
+    last_update_time = serializers.DateTimeField(required=True)
+    updates = ActionSerializer(many=True)
+    deletions = ActionSerializer(many=True)
+
+
+class ExchangeActionsResponseSerializer(serializers.Serializer):
+    pass
 
 
 class NotesUpdateResponseSerializer(serializers.Serializer):

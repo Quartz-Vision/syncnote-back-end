@@ -8,12 +8,13 @@ from rest_framework import status
 from rest_framework.response import Response
 
 from apps.notes.serializers import (
+    ExchangeActionsSerializer,
+    ExchangeActionsResponseSerializer,
     NoteSerializer,
-    NotesUpdateRequestSerializer,
     NotesUpdateResponseSerializer,
     NotesUploadResponseSerializer
 )
-from apps.notes.utils import filter_valid_uuids, get_notes_update_diff, update_notes
+from apps.notes.utils import exchange_actions, filter_valid_uuids, get_notes_update_diff, update_notes
 
 
 class NotesViewSet(viewsets.GenericViewSet, mixins.DestroyModelMixin):
@@ -26,43 +27,68 @@ class NotesViewSet(viewsets.GenericViewSet, mixins.DestroyModelMixin):
     def get_queryset(self):
         return self.request.user.notes.all()
 
-
     @swagger_auto_schema(
-        operation_description="Provides notes update so you can get updated notes and what need to be uploaded list",
+        operation_description='Receives actions (create, update, delete etc.) from client, returns requests for data and actions from server',
         responses={
             400: 'Errors',
-            200: NotesUpdateResponseSerializer(many=True),
+            200: ExchangeActionsResponseSerializer(many=True),
         },
-        request_body=NotesUpdateRequestSerializer(many=True)
+        request_body=ExchangeActionsSerializer(many=True)
     )
-    @action(methods=('POST',), detail=False, url_path='get-updates')
-    def get_updates(self, request):
-        serializer = NotesUpdateRequestSerializer(data=request.data or [], many=True)
+    @action(methods=('POST',), detail=False, url_path='exchange-actions')
+    def exchange_actions(self, request):
+        serializer = ExchangeActionsSerializer(data=request.data, many=True)
         serializer.is_valid(True)
+
+        exchange_actions(
+            user=self.request.user,
+            updates=serializer.validated_data['updates'],
+            deletions=serializer.validated_data['deletions'],
+            last_update_time=serializer.validated_data['last_update_time']
+        )
 
         return Response(
             data=get_notes_update_diff(self.get_queryset(), serializer.validated_data),
             status=status.HTTP_200_OK
         )
 
-    @swagger_auto_schema(
-        operation_description="Provides notes update so you can get updated notes and what need to be uploaded list",
-        responses={
-            400: 'Errors',
-            200: NotesUploadResponseSerializer(many=True),
-        },
-        request_body=NoteSerializer(many=True)
-    )
-    @action(methods=('POST',), detail=False, url_path='send-updates')
-    def send_updates(self, request):
-        serializer = NoteSerializer(data=request.data or [], many=True)
-        serializer.is_valid(True)
 
-        return Response(
-            data=update_notes(
-                self.get_queryset(),
-                serializer.validated_data,
-                self.get_serializer_context()
-            ),
-            status=status.HTTP_200_OK
-        )
+    # @swagger_auto_schema(
+    #     operation_description="Provides notes update so you can get updated notes and what need to be uploaded list",
+    #     responses={
+    #         400: 'Errors',
+    #         200: NotesUpdateResponseSerializer(many=True),
+    #     },
+    #     request_body=NotesUpdateRequestSerializer(many=True)
+    # )
+    # @action(methods=('POST',), detail=False, url_path='get-updates')
+    # def get_updates(self, request):
+    #     serializer = NotesUpdateRequestSerializer(data=request.data or [], many=True)
+    #     serializer.is_valid(True)
+
+    #     return Response(
+    #         data=get_notes_update_diff(self.get_queryset(), serializer.validated_data),
+    #         status=status.HTTP_200_OK
+    #     )
+
+    # @swagger_auto_schema(
+    #     operation_description="Provides notes update so you can get updated notes and what need to be uploaded list",
+    #     responses={
+    #         400: 'Errors',
+    #         200: NotesUploadResponseSerializer(many=True),
+    #     },
+    #     request_body=NoteSerializer(many=True)
+    # )
+    # @action(methods=('POST',), detail=False, url_path='send-updates')
+    # def send_updates(self, request):
+    #     serializer = NoteSerializer(data=request.data or [], many=True)
+    #     serializer.is_valid(True)
+
+    #     return Response(
+    #         data=update_notes(
+    #             self.get_queryset(),
+    #             serializer.validated_data,
+    #             self.get_serializer_context()
+    #         ),
+    #         status=status.HTTP_200_OK
+    #     )

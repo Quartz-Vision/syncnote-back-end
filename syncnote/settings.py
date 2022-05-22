@@ -191,7 +191,7 @@ SWAGGER_SETTINGS = {
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_METHODS = default_methods
 CORS_ALLOW_HEADERS = default_headers
-ALLOWED_HOSTS = map(lambda h: h.strip(), os.getenv('ALLOWED_HOSTS', '').split(','))
+ALLOWED_HOSTS = [host.strip() for host in os.getenv('ALLOWED_HOSTS', '').split(',')]
 
 ROOT_URLCONF = 'syncnote.urls'
 

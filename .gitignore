@@ -133,3 +133,5 @@ dmypy.json
 
 # idk what
 .idea/
+
+dump.rdb
