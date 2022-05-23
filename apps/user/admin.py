@@ -6,7 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import Group
 from rest_framework.authtoken.models import TokenProxy
 
-from apps.common.utils import convert_size
+from apps.common.services import convert_size
 
 User = get_user_model()
 

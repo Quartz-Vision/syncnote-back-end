@@ -2,8 +2,6 @@ from rest_framework import viewsets, mixins
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import action
 from drf_yasg.utils import swagger_auto_schema
-from rest_framework.serializers import Serializer
-from rest_framework.utils import serializer_helpers
 from rest_framework import status
 from rest_framework.response import Response
 
@@ -11,10 +9,8 @@ from apps.notes.serializers import (
     ExchangeActionsSerializer,
     ExchangeActionsResponseSerializer,
     NoteSerializer,
-    NotesUpdateResponseSerializer,
-    NotesUploadResponseSerializer
 )
-from apps.notes.utils import exchange_actions, filter_valid_uuids, get_notes_update_diff, update_notes
+from apps.notes.services import exchange_actions
 
 
 class NotesViewSet(viewsets.GenericViewSet, mixins.DestroyModelMixin):
@@ -40,15 +36,13 @@ class NotesViewSet(viewsets.GenericViewSet, mixins.DestroyModelMixin):
         serializer = ExchangeActionsSerializer(data=request.data, many=True)
         serializer.is_valid(True)
 
-        exchange_actions(
-            user=self.request.user,
-            updates=serializer.validated_data['updates'],
-            deletions=serializer.validated_data['deletions'],
-            last_update_time=serializer.validated_data['last_update_time']
-        )
-
         return Response(
-            data=get_notes_update_diff(self.get_queryset(), serializer.validated_data),
+            data=exchange_actions(
+                user=self.request.user,
+                updates=serializer.validated_data['updates'],
+                deletions=serializer.validated_data['deletions'],
+                last_update_time=serializer.validated_data['last_update_time']
+            ),
             status=status.HTTP_200_OK
         )
 

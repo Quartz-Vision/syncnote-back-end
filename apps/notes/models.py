@@ -83,11 +83,24 @@ class Deletion(UUIDModel):
         related_name='deletions',
         verbose_name=_('user'),
     )
-    note_id = models.UUIDField(verbose_name=_('note id'))
+    note_static_id = models.UUIDField(verbose_name=_('note id'))
+    note = models.ForeignKey(
+        Note,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='deletions',
+        verbose_name=_('note'),
+    )
     deleted_at = models.DateTimeField(
         default=timezone.now,
         blank=True,
         verbose_name=_('deletion time')
+    )
+    created_at = models.DateTimeField(
+        default=timezone.now,
+        blank=True,
+        verbose_name=_('deletion creation time')
     )
 
     class Meta:
@@ -95,4 +108,7 @@ class Deletion(UUIDModel):
         verbose_name_plural = _("Deletions")
 
     def __str__(self):
-        return _('Note<{}> of {}').format(self.note_id, self.user)
+        return _('Note {} of {}').format(
+            f'<{self.note_static_id}>' if not self.note else f'"{self.note.title}"',
+            self.user
+        )

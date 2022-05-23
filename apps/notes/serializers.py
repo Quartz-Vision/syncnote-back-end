@@ -20,7 +20,7 @@ class TagListField(serializers.ListField):
 
 
 class NoteSerializer(serializers.ModelSerializer):
-    local_id = serializers.CharField(required=False)  # need it to receive notes' updates
+    client_id = serializers.CharField(required=False)  # need it to receive notes' updates
 
     tags = TagListField(
         allow_empty=True,
@@ -47,7 +47,7 @@ class NoteSerializer(serializers.ModelSerializer):
         data_size = len(validated_data.get('content'))
         user = getattr(self.context.get('request'), 'user')
 
-        validated_data.pop('local_id', None)
+        validated_data.pop('client_id', None)
 
         with transaction.atomic():
             instance = Note.objects.create(
@@ -63,9 +63,8 @@ class NoteSerializer(serializers.ModelSerializer):
         tags = validated_data.pop('tags', None)
         content = validated_data.get('content')
         data_size = len(content or '')
-        user = getattr(self.context.get('request'), 'user')
 
-        validated_data.pop('local_id', None)
+        validated_data.pop('client_id', None)
         
         with transaction.atomic():
             instance = super(NoteSerializer, self).update(
@@ -97,8 +96,3 @@ class ExchangeActionsResponseSerializer(serializers.Serializer):
 class NotesUpdateResponseSerializer(serializers.Serializer):
     notes_updated = NoteSerializer(many=True)
     notes_to_send = serializers.ListField(child=serializers.CharField())
-
-
-class NotesUploadResponseSerializer(serializers.Serializer):
-    local_id = serializers.CharField()
-    remote_id = serializers.CharField()

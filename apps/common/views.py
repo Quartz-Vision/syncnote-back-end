@@ -11,7 +11,7 @@ from apps.common.openapi_docs import (
     SendMailSerializer,
     redirect_parameters
 )
-from apps.common.utils import send_mail_contact, CustomSchemeRedirect
+from apps.common.services import send_mail_contact, CustomSchemeRedirect
 
 
 class CommonViewSet(viewsets.ViewSet):

@@ -6,7 +6,7 @@ from dj_rest_auth.serializers import (
 )
 from rest_framework import serializers
 
-from apps.common.utils import PasswordField, send_mail_to
+from apps.common.services import PasswordField, send_mail_to
 
 User = get_user_model()
 
