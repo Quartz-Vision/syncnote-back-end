@@ -68,6 +68,12 @@ class Note(UUIDModel):
         verbose_name=_('update time')
     )
 
+    created_at = models.DateTimeField(
+        default=timezone.now,
+        blank=True,
+        verbose_name=_('creation time')
+    )
+
     class Meta:
         verbose_name = _("Note")
         verbose_name_plural = _("Notes")
@@ -106,6 +112,7 @@ class Deletion(UUIDModel):
     class Meta:
         verbose_name = _("Deletion")
         verbose_name_plural = _("Deletions")
+        ordering = ('deleted_at', 'created_at')
 
     def __str__(self):
         return _('Note {} of {}').format(

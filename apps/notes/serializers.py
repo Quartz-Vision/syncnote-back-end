@@ -84,7 +84,7 @@ class ActionSerializer(serializers.Serializer):
 
     
 class ExchangeActionsSerializer(serializers.Serializer):
-    last_update_time = serializers.DateTimeField(required=True)
+    last_update_time = serializers.DateTimeField(required=False)
     updates = ActionSerializer(many=True)
     deletions = ActionSerializer(many=True)
 

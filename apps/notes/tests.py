@@ -85,5 +85,21 @@ class NotesSyncronisationTest(TestCase):
             [action['note_id'] for action in updates],
         )
 
+        # wihout last update time
+        result = exchange_actions(
+            user=self.user,
+            updates=[],
+            deletions=[]
+        )
+
+        self.assertEqual(
+            self.user.notes.all().count(),
+            len(result['update_on_client'])
+        )
+        self.assertEqual(
+            self.user.deletions.all().count(),
+            len(result['deletions'])
+        )
+
     def tearDown(self):
         self.user.delete()

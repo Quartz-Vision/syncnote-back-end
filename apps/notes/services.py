@@ -1,6 +1,7 @@
 from datetime import datetime
 from functools import reduce
 import operator
+from typing import Optional
 
 from django.db.models import F, Max, OuterRef, Q, Subquery
 from django.contrib.auth import get_user_model
@@ -18,7 +19,7 @@ def exchange_actions(
     user: User,
     updates: list[ActionDict],
     deletions: list[ActionDict],
-    last_update_time: datetime
+    last_update_time: Optional[datetime] = None,
 ) -> dict:
     """
     Returns updates and sync list in the format of ExchangeActionsResponseSerializer
@@ -62,17 +63,17 @@ def exchange_actions(
         )
     ).delete()
 
+    db_new_deletions = (
+        user.deletions.filter(created_at__gt=last_update_time) if last_update_time
+        else user.deletions.all()
+    )
     new_deletions = ActionSerializer(
         data=[
             {
                 'note_id': note_id,
                 'time': time
             }
-            for note_id, time in (
-                user.deletions
-                .filter(created_at__gt=last_update_time)
-                .values_list('note_static_id', 'deleted_at')
-            )
+            for note_id, time in db_new_deletions.values_list('note_static_id', 'deleted_at')
         ],
         many=True
     )
@@ -103,7 +104,11 @@ def exchange_actions(
         .values_list('id', flat=True)
     ) if valid_updates else set()
     
-    server_updated_notes = user.notes.filter(updated_at__gt=last_update_time)
+    server_updated_notes = (
+        user.notes.filter(Q(created_at__gt=last_update_time) | Q(updated_at__gt=last_update_time))
+            if last_update_time
+        else user.notes.all()
+    )  
 
     return {
         'update_on_client': [
