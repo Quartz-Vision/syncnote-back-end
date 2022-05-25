@@ -28,11 +28,14 @@ def exchange_actions(
     # sync deletions
 
     # need this to use fk in queries
+    valid_deletion_ids = filter_valid_uuids([action['note_id'] for action in deletions])
+    valid_deletion_ids_set = set(valid_deletion_ids)
+
     existing_deleted_notes_ids = set(
         str(id)
         for id in Note.objects.filter(
             user=user,
-            id__in=[action['note_id'] for action in deletions]
+            id__in=valid_deletion_ids
         ).values_list('id', flat=True)
     ) if deletions else set()
     
@@ -45,6 +48,7 @@ def exchange_actions(
             deleted_at=action['time']
         )
         for action in deletions
+        if action['note_id'] in valid_deletion_ids_set
     ])
 
     user.notes.annotate(
@@ -122,19 +126,21 @@ def exchange_actions(
 
 def apply_updates(user: User, updated_notes: list[dict], context: dict = None) -> list[ClientServerIdsDict]:
     valid_updated_notes_ids = set(filter_valid_uuids(
-        [note['client_id'] for note in updated_notes]
+        [note['server_id'] for note in updated_notes]
     ))
 
     serializer = NoteSerializer(context=context)
     client_server_ids: list[ClientServerIdsDict] = []
 
     for note in updated_notes:
-        if note['client_id'] in valid_updated_notes_ids and user.notes.filter(id=note['client_id']).exists():
-            serializer.update(note, note)
+        if note['server_id'] in valid_updated_notes_ids and user.notes.filter(id=note['server_id']).exists():
+            serializer.update(user.notes.get(id=note['server_id']), note)
         else:
-            db_id = str(serializer.create(note).id)
+            client_id = note['server_id']
+            db_id = str(serializer.create(note).id)  # it will change note dict
+            
             client_server_ids.append({
-                'client_note_id': note['client_id'],
+                'client_note_id': str(client_id),
                 'server_note_id': db_id
             })
 

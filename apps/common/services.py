@@ -16,6 +16,10 @@ User = get_user_model()
 uuid_validation_regex = re.compile(r'^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$')
 
 
+def uuid_is_valid(uuid):
+    return not not uuid_validation_regex.match(uuid)
+
+
 def filter_valid_uuids(ids: Iterable[str]) -> list[str]:
     return [id for id in ids if uuid_validation_regex.match(id)]
 

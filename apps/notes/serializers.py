@@ -20,7 +20,7 @@ class TagListField(serializers.ListField):
 
 
 class NoteSerializer(serializers.ModelSerializer):
-    client_id = serializers.CharField(required=False)  # need it to receive notes' updates
+    server_id = serializers.CharField(required=False)  # need it to receive notes' updates
 
     tags = TagListField(
         allow_empty=True,
@@ -47,7 +47,7 @@ class NoteSerializer(serializers.ModelSerializer):
         data_size = len(validated_data.get('content'))
         user = getattr(self.context.get('request'), 'user')
 
-        validated_data.pop('client_id', None)
+        validated_data.pop('server_id', None)
 
         with transaction.atomic():
             instance = Note.objects.create(
@@ -64,7 +64,7 @@ class NoteSerializer(serializers.ModelSerializer):
         content = validated_data.get('content')
         data_size = len(content or '')
 
-        validated_data.pop('client_id', None)
+        validated_data.pop('server_id', None)
         
         with transaction.atomic():
             instance = super(NoteSerializer, self).update(
@@ -84,7 +84,7 @@ class ActionSerializer(serializers.Serializer):
 
     
 class ExchangeActionsSerializer(serializers.Serializer):
-    last_update_time = serializers.DateTimeField(required=False)
+    last_update_time = serializers.DateTimeField(required=False, allow_null=True)
     updates = ActionSerializer(many=True)
     deletions = ActionSerializer(many=True)
 
@@ -93,6 +93,6 @@ class ExchangeActionsResponseSerializer(serializers.Serializer):
     pass
 
 
-class NotesUpdateResponseSerializer(serializers.Serializer):
-    notes_updated = NoteSerializer(many=True)
-    notes_to_send = serializers.ListField(child=serializers.CharField())
+class ClientServerIdsSerializer(serializers.Serializer):
+    client_note_id = serializers.CharField()
+    server_note_id = serializers.CharField()

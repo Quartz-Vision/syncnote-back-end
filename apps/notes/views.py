@@ -6,11 +6,12 @@ from rest_framework import status
 from rest_framework.response import Response
 
 from apps.notes.serializers import (
+    ClientServerIdsSerializer,
     ExchangeActionsSerializer,
     ExchangeActionsResponseSerializer,
     NoteSerializer,
 )
-from apps.notes.services import exchange_actions
+from apps.notes.services import apply_updates, exchange_actions
 
 
 class NotesViewSet(viewsets.GenericViewSet, mixins.DestroyModelMixin):
@@ -27,13 +28,13 @@ class NotesViewSet(viewsets.GenericViewSet, mixins.DestroyModelMixin):
         operation_description='Receives actions (create, update, delete etc.) from client, returns requests for data and actions from server',
         responses={
             400: 'Errors',
-            200: ExchangeActionsResponseSerializer(many=True),
+            200: ExchangeActionsResponseSerializer(),
         },
-        request_body=ExchangeActionsSerializer(many=True)
+        request_body=ExchangeActionsSerializer()
     )
     @action(methods=('POST',), detail=False, url_path='exchange-actions')
     def exchange_actions(self, request):
-        serializer = ExchangeActionsSerializer(data=request.data, many=True)
+        serializer = ExchangeActionsSerializer(data=request.data)
         serializer.is_valid(True)
 
         return Response(
@@ -42,6 +43,28 @@ class NotesViewSet(viewsets.GenericViewSet, mixins.DestroyModelMixin):
                 updates=serializer.validated_data['updates'],
                 deletions=serializer.validated_data['deletions'],
                 last_update_time=serializer.validated_data['last_update_time']
+            ),
+            status=status.HTTP_200_OK
+        )
+
+    @swagger_auto_schema(
+        operation_description='Receives updated notes from client, returns client-server id pairs for created notes',
+        responses={
+            400: 'Errors',
+            200: ClientServerIdsSerializer(many=True),
+        },
+        request_body=NoteSerializer(many=True)
+    )
+    @action(methods=('POST',), detail=False, url_path='apply-updates')
+    def apply_updates(self, request):
+        serializer = NoteSerializer(data=request.data, many=True)
+        serializer.is_valid(True)
+
+        return Response(
+            data=apply_updates(
+                user=self.request.user,
+                updated_notes=serializer.validated_data,
+                context=self.get_serializer_context()
             ),
             status=status.HTTP_200_OK
         )
