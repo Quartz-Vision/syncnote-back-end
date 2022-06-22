@@ -69,7 +69,6 @@ class NotesViewSet(viewsets.GenericViewSet, mixins.DestroyModelMixin):
             status=status.HTTP_200_OK
         )
 
-
     # @swagger_auto_schema(
     #     operation_description="Provides notes update so you can get updated notes and what need to be uploaded list",
     #     responses={
